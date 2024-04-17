@@ -6,3 +6,5 @@ x = np.array([[0, 1, 2, 3],
               [9, 8, 7, 6]])
 
 print(x[1][2])
+
+'''this is cool!'''

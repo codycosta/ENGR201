@@ -1,1 +1,3 @@
 This repo is for SJSU graduate coursework for the ENGR201 class
+Mainly going to be used for storing some python assignments that my desktop and laptop can both easily access
+I'll add more as I feel necessary I guess...
