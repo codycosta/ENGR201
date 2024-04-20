@@ -1,6 +1,6 @@
 ''' 
 
-    probability hw qeustion, plotting distribution of n choose k:
+    probability hw question, plotting distribution of n choose k:
     
     compute n choose k for n = 0 ... 6, 0 <= k <= n and plot to create pascal's triangle
     plot the value of n choose k for each value of n
@@ -18,15 +18,15 @@ upper_limit = 6    # change this to edit the sample size of the graphs
 legends = []
 
 
-n = np.array([i for i in range(upper_limit + 1)])
+n = np.array(range(upper_limit + 1))
 
 for num in n:
 
     legends.append(f'n = {num}')
 
-    nchoosek = np.array([math.comb(num, el) for el in n[ : num + 1]])
+    nchoosek = np.array([math.comb(num, k) for k in n[: num + 1]])
 
-    plt.plot(n[ : num + 1] ,nchoosek, marker='o')
+    plt.plot(n[: num + 1], nchoosek, marker='o')
 
 
 # design our plot
