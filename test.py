@@ -45,7 +45,7 @@ upper_limit = 6    # change this to edit the sample size of the graphs
 legends = []
 
 
-n = np.array([i for i in range(upper_limit + 1)])
+n = np.array(range(upper_limit + 1))
 
 for num in n:
 
@@ -64,3 +64,6 @@ plt.legend(legends)
 plt.title(f'Plots of comb(n, k) for values n,k <= {upper_limit}')
 
 plt.show()
+
+
+w = [x for x in [0, 1, 2, 3, 4, 5, 6] if x % 2 == 0]
