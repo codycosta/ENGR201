@@ -69,10 +69,7 @@ def generate_matrix(prevalence) -> np.ndarray:
         print(f'{prevalence} caused an error')
 
 
-
-# test matrix function
-# m = generate_matrix(0.05)
-# print(m)
+# calculate needed accuracy and precision values to plot for each matrix
 
 def calculate_accuracy_and_precision(matrix) -> dict[str: float]:
 
@@ -92,47 +89,31 @@ def calculate_accuracy_and_precision(matrix) -> dict[str: float]:
     }
 
 
-# test accuracy/precision function
-# test1 = calculate_accuracy_and_precision(m)
-# print(test1)
 
-
-# main
+# main procedure to generate plot
 
 accuracy = []
 precision = []
 
 
-for p in PREVALENCE:
+plt.title('Plot of accuracy and precision for prevalence = [0...1]')
 
-    p = round(p, 2)
 
-    m = generate_matrix(p)
+for idx, p in enumerate(PREVALENCE):
+
+    m = generate_matrix(round(p, 2))
     output = calculate_accuracy_and_precision(m)
 
     accuracy.append(output['accuracy'])
     precision.append(output['precision'])
 
-    # print(round(output['accuracy'], 2))
-
-
-# plt.plot(PREVALENCE, accuracy, PREVALENCE, precision)
-# plt.legend(['accuracy', 'precision'])
-# plt.title('Plot of accuracy and precision for prevalence = [0...1]')
-# plt.show()
-
-
-# test plot animation
-
-for idx, p in enumerate(PREVALENCE):
-    
     plt.plot(PREVALENCE[:idx], accuracy[:idx], PREVALENCE[:idx], precision[:idx], marker='o')
     plt.pause(0.1)
+
 
 plt.plot(PREVALENCE, np.poly1d(np.polyfit(PREVALENCE, accuracy, 1))(PREVALENCE))
 plt.plot(PREVALENCE, np.poly1d(np.polyfit(PREVALENCE, precision, 1))(PREVALENCE))
 
 plt.legend(['accuracy', 'precision', 'accuracy trend', 'precision trend'])
-plt.title('Plot of accuracy and precision for prevalence = [0...1]')
 
 plt.show()
