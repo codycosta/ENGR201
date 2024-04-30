@@ -22,7 +22,6 @@ import matplotlib.pyplot as plt
 total_population: int = 100
 
 PREVALENCE = np.linspace(0, 1, 101)
-# print(prevalence)
 
 
 # as prevalence increases from 0 to 1 we need to generate a new matrix of values at each step
@@ -45,7 +44,7 @@ def generate_matrix(prevalence) -> np.ndarray:
             TN = total_population - FP
 
             return np.array([[0, 0],
-                            [FP, TN]])
+                             [FP, TN]])
         
         if prevalence == 1:
             TP = np.random.randint(0, total_population)
@@ -63,7 +62,7 @@ def generate_matrix(prevalence) -> np.ndarray:
         TN = total_false - FP
 
         return np.array([[TP, FN],
-                        [FP, TN]])
+                         [FP, TN]])
 
     except ValueError:
         print(f'{prevalence} caused an error')
@@ -104,16 +103,17 @@ for idx, p in enumerate(PREVALENCE):
     m = generate_matrix(round(p, 2))
     output = calculate_accuracy_and_precision(m)
 
-    accuracy.append(output['accuracy'])
-    precision.append(output['precision'])
+    accuracy.append(output['accuracy'] * 100)
+    precision.append(output['precision'] * 100)
 
     plt.plot(PREVALENCE[:idx], accuracy[:idx], PREVALENCE[:idx], precision[:idx], marker='o')
-    plt.pause(0.1)
+    plt.pause(0.05)
 
 
 plt.plot(PREVALENCE, np.poly1d(np.polyfit(PREVALENCE, accuracy, 1))(PREVALENCE))
 plt.plot(PREVALENCE, np.poly1d(np.polyfit(PREVALENCE, precision, 1))(PREVALENCE))
 
 plt.legend(['accuracy', 'precision', 'accuracy trend', 'precision trend'])
-
+plt.xlabel('Prevalence')
+plt.ylabel('Metric (%)')
 plt.show()
