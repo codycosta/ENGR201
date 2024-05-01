@@ -1,3 +1,6 @@
+import numpy as np
+import math
+
 def compute_n_terms(total_events:int) -> dict[str: any]:
     '''
         Auxiliary calculator for EVENTS problem 1b in Homework 2

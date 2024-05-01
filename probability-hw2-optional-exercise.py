@@ -109,8 +109,6 @@ def increment_matrix(m: np.ndarray) -> np.ndarray:
 
         This essentially will create less random behavior between
         each iteration of the prevalence of interest
-
-
     '''
 
     FP = m[1, 0]
@@ -176,30 +174,102 @@ def calculate_accuracy_and_precision(matrix: np.ndarray) -> dict[str: float]:
 
         Return:
         
-        Values for the precision and accuracy of the confusion matrix
+        Computes values for the precision and accuracy of the confusion matrix for a given prevalence
+    '''
+    try:
+
+        accuracy = (matrix[0, 0] + matrix[1, 1]) / np.sum(matrix)
+        precision = matrix[0, 0] / (matrix[0, 0] + matrix[1, 1])
+
+        # return {
+        #     'accuracy': accuracy,
+        #     'precision': precision
+        # }
+    
+    except RuntimeWarning:
+        print(precision)
+        print(f'TP = {matrix[0, 0]}\tTN = {matrix[1, 1]}')
+
+        # won't fucking print here, not sure why
+    
+    
+    finally:
+
+        return {
+            'accuracy': accuracy,
+            'precision': precision
+        }
+
+
+
+# fucntion to calculate data we want to plot later
+
+def generate_performance_metrics_for_all_values_of_prevalence(population: int) -> dict[str: np.ndarray]:
+
+    '''
+        Return:
+
+        Processes the cumulative performance of the matrix as prevalence increases from 0 to 1
+        Returns a dictionary of arrays for precision, accuracy, and prevalence
     '''
 
-    accuracy = (matrix[0, 0] + matrix[1, 1]) / np.sum(matrix)
-    precision = matrix[0, 0] / (matrix[0, 0] + matrix[1, 1])
+    # population = 144
+    precision = np.array([])
+    accuracy = np.array([])
+
+    matrix = generate_random_matrix(0, population)
+    # print(matrix)
+
+    while np.sum(matrix):
+
+        precision = np.append(precision, calculate_accuracy_and_precision(matrix)['precision'])
+        accuracy = np.append(accuracy, calculate_accuracy_and_precision(matrix)['accuracy'])
+
+        matrix = increment_matrix(matrix)
+        # print(precision)
+
+    prevalence = np.linspace(0, 1, precision.shape[0])
+
+    # plt.plot(prevalence, precision, prevalence, accuracy)
+
+    # plt.title('Plot of accuracy and precision for prevalence = [0...1]')
+    # plt.legend(['precision', 'accuracy'])
+    # plt.xlabel('Prevalence')
+    # plt.ylabel('Metric (%)')
+    # plt.show()
+
+    # print(precision.shape)
 
     return {
+        'precision': precision,
         'accuracy': accuracy,
-        'precision': precision
+        'prevalence': prevalence
     }
 
 
 
-def generate_average_plot_of_n_trials(trials: int) -> None:
+def generate_average_plot_of_n_trials(trials: int, population:int) -> None:
     
     '''
         Return:
 
         creates a plot of the average performance of the precision
-        and accuracy over a set number of trials
+        and accuracy of the a confusion matrix over a set number of trials
+
+        (would be nice to add more functionality for simluating the same starting
+        matrix for n trials, instead of generating a new random one with each trial)
+
+
+        Issue:
+
+        Will provide a Runtime warning when the number of trials exceeds 100
+        Issue is reported within calculate_accuracy_and_precision()
+        
+        Still investigating...
 
     '''
 
-    initial_result = main()
+    initial_result = generate_performance_metrics_for_all_values_of_prevalence(population)
 
     prevalence = initial_result['prevalence']
 
@@ -211,7 +281,7 @@ def generate_average_plot_of_n_trials(trials: int) -> None:
 
     while n < trials:
         
-        trial_result = main()
+        trial_result = generate_performance_metrics_for_all_values_of_prevalence(population)
 
         # if not ave_precision.shape[0]:
         #     ave_precision = np.append(ave_precision, trial_result['precision'])
@@ -221,6 +291,7 @@ def generate_average_plot_of_n_trials(trials: int) -> None:
 
         precision = np.vstack([precision, trial_result['precision']])
         accuracy = np.vstack([accuracy, trial_result['accuracy']])
+        prevalence = np.vstack([prevalence, trial_result['prevalence']])
 
         n += 1
     
@@ -230,10 +301,15 @@ def generate_average_plot_of_n_trials(trials: int) -> None:
     # flatten array into one vector of all column averages
 
     ave_precision = precision.mean(axis=0)
+    ave_accuracy = accuracy.mean(axis=0)
+    ave_prevalence = prevalence.mean(axis=0)
 
-    plt.plot(prevalence, ave_precision)
+    plt.plot(ave_prevalence, ave_precision, ave_prevalence, ave_accuracy)
+    plt.title(f'Average Performance over {trials} trials')
+    plt.legend(['Precision', 'Accuracy'])
+    plt.xlabel('Prevalence')
+    plt.ylabel('Metric (%)')
     plt.show()
-
 
 
 
@@ -272,45 +348,8 @@ def main_old() -> None:
     plt.show()
 
 
-
-def main() -> dict[str: np.ndarray]:
-
-    population = 144
-    precision = np.array([])
-    accuracy = np.array([])
-
-    matrix = generate_random_matrix(0, population)
-    # print(matrix)
-
-    while np.sum(matrix):
-
-        precision = np.append(precision, calculate_accuracy_and_precision(matrix)['precision'])
-        accuracy = np.append(accuracy, calculate_accuracy_and_precision(matrix)['accuracy'])
-
-        matrix = increment_matrix(matrix)
-        # print(precision)
-
-    prevalence = np.linspace(0, 1, precision.shape[0])
-
-    # plt.plot(prevalence, precision, prevalence, accuracy)
-
-    # plt.title('Plot of accuracy and precision for prevalence = [0...1]')
-    # plt.legend(['precision', 'accuracy'])
-    # plt.xlabel('Prevalence')
-    # plt.ylabel('Metric (%)')
-    # plt.show()
-
-    # print(precision.shape)
-
-    return {
-        'precision': precision,
-        'accuracy': accuracy,
-        'prevalence': prevalence
-    }
-
-
-
 # main_old()
-main()
+# main()
 
-generate_average_plot_of_n_trials(200)
+# generate_performance_metrics(population=500)
+generate_average_plot_of_n_trials(trials=100, population=500)
