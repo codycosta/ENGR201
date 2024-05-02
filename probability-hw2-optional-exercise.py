@@ -53,6 +53,7 @@ def generate_random_matrix(prevalence: int, total_population: int) -> np.ndarray
 
         This function is still usable to create the base case of 0 prevalence however
     '''
+
     try:
         # generate a random number of true and false values to fill the matrix
 
@@ -169,13 +170,23 @@ def calculate_accuracy_and_precision(matrix: np.ndarray) -> dict[str: float]:
     '''
         Reminder:
 
-        Accuracy    = sum of diagonal / total count
+        Accuracy    = ( TP + TN ) / total count
         Precision   = PPV = TP / ( TP + TN )
 
         Return:
         
         Computes values for the precision and accuracy of the confusion matrix for a given prevalence
+
+        
+        Issue:
+
+        Throws a RuntimeWarning for line:   precision = matrix[0, 0] / (matrix[0, 0] + matrix[1, 1])
+        My assumption is that the diagonal of the matrix can proabilistically reach 0 or near 0 a small fraction of the time
+        Across hundreds of simulations though, it becomes more likely
+
+        Workaround is to increase the population (sample size) of the starting matrix
     '''
+
     try:
 
         accuracy = (matrix[0, 0] + matrix[1, 1]) / np.sum(matrix)
@@ -187,7 +198,7 @@ def calculate_accuracy_and_precision(matrix: np.ndarray) -> dict[str: float]:
         # }
     
     except RuntimeWarning:
-        print(precision)
+        # print(precision)
         print(f'TP = {matrix[0, 0]}\tTN = {matrix[1, 1]}')
 
         # won't fucking print here, not sure why
@@ -260,12 +271,15 @@ def generate_average_plot_of_n_trials(trials: int, population:int) -> None:
         matrix for n trials, instead of generating a new random one with each trial)
 
 
-        Issue:
+        Issues:
 
         Will provide a Runtime warning when the number of trials exceeds 100
         Issue is reported within calculate_accuracy_and_precision()
         
         Still investigating...
+
+        Also will not execute properly when trials = 1, need a case to handle that condition
+        ... added single trial case
 
     '''
 
@@ -275,6 +289,17 @@ def generate_average_plot_of_n_trials(trials: int, population:int) -> None:
 
     precision = initial_result['precision']
     accuracy = initial_result['accuracy']
+
+    if trials == 1:
+
+        plt.plot(prevalence, precision, prevalence, accuracy)
+        plt.title(f'Performance of 1 trial')
+        plt.legend(['Precision', 'Accuracy'])
+        plt.xlabel('Prevalence')
+        plt.ylabel('Metric (%)')
+        plt.show()
+
+        return
 
     
     n = 1
@@ -310,6 +335,8 @@ def generate_average_plot_of_n_trials(trials: int, population:int) -> None:
     plt.xlabel('Prevalence')
     plt.ylabel('Metric (%)')
     plt.show()
+
+    return
 
 
 
@@ -352,4 +379,13 @@ def main_old() -> None:
 # main()
 
 # generate_performance_metrics(population=500)
-generate_average_plot_of_n_trials(trials=100, population=500)
+
+def main() -> None:
+
+    trials: int     = int(input('\nEnter the number of trials to simulate:\t'))
+    population:int  = int(input('\nEnter sample population size:\t'))
+
+    generate_average_plot_of_n_trials(trials=trials, population=population)
+
+
+main()
