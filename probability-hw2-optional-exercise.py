@@ -19,10 +19,6 @@ Prevalence  = P(True)
 import numpy as np
 import matplotlib.pyplot as plt
 
-# total_population: int = 100
-
-# PREVALENCE = np.linspace(0, 1, 101)
-
 
 
 # as prevalence increases from 0 to 1 we need to generate a new matrix of values at each step
@@ -54,36 +50,30 @@ def generate_random_matrix(prevalence: int, total_population: int) -> np.ndarray
         This function is still usable to create the base case of 0 prevalence however
     '''
 
-    try:
-        # generate a random number of true and false values to fill the matrix
+    if prevalence == 0:
+        FP = np.random.randint(0, total_population)
+        TN = total_population - FP
 
-        if prevalence == 0:
-            FP = np.random.randint(0, total_population)
-            TN = total_population - FP
-
-            return np.array([[0, 0],
-                             [FP, TN]])
-        
-        if prevalence == 1:
-            TP = np.random.randint(0, total_population)
-            FN = total_population - TP
-
-            return np.array([[TP, FN],
-                             [0, 0]])
-
-        total_true = prevalence * total_population  # TP + FN
-        TP = np.random.randint(0, total_true)
-        FN = total_true - TP
-
-        total_false = total_population - total_true # FP + TN
-        FP = np.random.randint(0, total_false)
-        TN = total_false - FP
+        return np.array([[0, 0],
+                         [FP, TN]])
+    
+    if prevalence == 1:
+        TP = np.random.randint(0, total_population)
+        FN = total_population - TP
 
         return np.array([[TP, FN],
-                         [FP, TN]])
+                         [0, 0]])
 
-    except ValueError:
-        print(f'{prevalence} caused an error')
+    total_true = prevalence * total_population  # TP + FN
+    TP = np.random.randint(0, total_true)
+    FN = total_true - TP
+
+    total_false = total_population - total_true # FP + TN
+    FP = np.random.randint(0, total_false)
+    TN = total_false - FP
+
+    return np.array([[TP, FN],
+                     [FP, TN]])
 
 
 
@@ -259,7 +249,9 @@ def generate_performance_metrics_for_all_values_of_prevalence(population: int) -
 
 
 
-def generate_average_plot_of_n_trials(trials: int, population:int) -> None:
+# function to run n amount of simulations and average the results
+
+def generate_average_plot_of_n_trials(trials: int, population: int) -> None:
     
     '''
         Return:
@@ -340,9 +332,9 @@ def generate_average_plot_of_n_trials(trials: int, population:int) -> None:
 
 
 
-# main procedure to generate plot
+# old function from a previous commit that I haven't deleted, N/A
 
-def main_old() -> None:
+def old() -> None:
 
     PREVALENCE = np.linspace(0, 1, 101)
     population: int = 100
@@ -375,17 +367,27 @@ def main_old() -> None:
     plt.show()
 
 
-# main_old()
-# main()
 
-# generate_performance_metrics(population=500)
+# Procedural function to initialize the simulation of the confusion matrix performance
 
 def main() -> None:
 
-    trials: int     = int(input('\nEnter the number of trials to simulate:\t'))
-    population:int  = int(input('\nEnter sample population size:\t'))
+    print('\nEnter positive integer values, or press <Ctrl+C> to quit:\n')
 
-    generate_average_plot_of_n_trials(trials=trials, population=population)
+    try:
+
+        trials: int     = int(input('\nEnter the number of trials to simulate:\t'))
+        population: int = int(input('\nEnter sample population size:\t'))
+
+        generate_average_plot_of_n_trials(trials=trials, population=population)
+
+    except KeyboardInterrupt:
+
+        print('\n\n<Ctrl+C> detected, user elected to quit program. Goodbye :)')
+
+    else:
+
+        print('\nProcessed ended gracefully')
 
 
 main()

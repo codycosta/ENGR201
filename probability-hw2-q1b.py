@@ -1,3 +1,4 @@
+
 import numpy as np
 import math
 
@@ -18,7 +19,7 @@ def compute_n_terms(total_events:int) -> dict[str: any]:
     for i in range(2, total_events + 1):
 
         arr = np.append(arr, math.comb(i, 2))
-        
+
     # return np.sum(arr)
     # return math.factorial(np.sum(arr))
 
@@ -26,6 +27,5 @@ def compute_n_terms(total_events:int) -> dict[str: any]:
         'terms': math.factorial(np.sum(arr)),
         'large_enough': math.factorial(np.sum(arr)) > math.factorial(total_events)
     }
-
 
 print(compute_n_terms(5))
