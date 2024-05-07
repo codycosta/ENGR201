@@ -65,30 +65,21 @@ def commute_matrices(m1: np.ndarray, m2: np.ndarray) -> bool:
 
 
 
-# test commutativity of diagonal matrices
-
-# diagonal_m1 = np.array([[6, 0],
-#                         [0, 21]])
-
-# diagonal_m2 = np.array([[4, 0],
-#                         [0, 7]])
-
-# print(commute_matrices(diagonal_m1, diagonal_m2))
-
-# print(commute_matrices(generate_random_matrix(10, 'd'), generate_random_matrix(10, 'd')))
-# print(commute_matrices(generate_random_matrix(10, 't'), generate_random_matrix(10, 't')))
-# print(commute_matrices(generate_random_matrix(10, 's'), generate_random_matrix(10, 's')))
-
-# m = generate_random_matrix(10, 'd')
-# print(m)
-
-
-
 def main() -> None:
 
-    size: int = int(sys.argv[1])
+    '''
+        Gives the option of command line argument for matrix size
+        If none is specified, the default size will be 5 x 5
+    '''
 
-    print('\nEvaluating matrix commutativity:\n')
+    try:
+        size: int = int(sys.argv[1])
+
+    except IndexError:
+        size: int = 5
+
+
+    print(f'\nEvaluating matrix commutativity for {size} x {size} cases:\n')
 
     print(f'diagonal:\t{commute_matrices(generate_random_matrix(size, 'd'), generate_random_matrix(size, 'd'))}')
     print(f'triangular:\t{commute_matrices(generate_random_matrix(size, 't'), generate_random_matrix(size, 't'))}')
