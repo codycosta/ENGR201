@@ -22,14 +22,14 @@ def generate_random_matrix(size: int, type: str) -> np.ndarray:
     if type == 'd':
 
         for j in range(size):
-            matrix[j, j] = np.random.randint(0, 100)
+            matrix[j, j] = np.random.randint(0, 10)
 
         return matrix
     
     elif type == 't':
 
         for j in range(size):
-            matrix[j, j:] = np.array([np.random.randint(0, 100) for j in range(size - j)])
+            matrix[j, j:] = np.array([np.random.randint(0, 10) for j in range(size - j)])
 
         return matrix
 
@@ -39,7 +39,7 @@ def generate_random_matrix(size: int, type: str) -> np.ndarray:
         # symmetries = size - 1
 
         for j in range(size):
-            random_filler = np.array([np.random.randint(0, 100) for j in range(size - j - 1)])
+            random_filler = np.array([np.random.randint(0, 10) for j in range(size - j - 1)])
 
             m[j, j+1:] = random_filler
             m[j+1:, j] = random_filler
