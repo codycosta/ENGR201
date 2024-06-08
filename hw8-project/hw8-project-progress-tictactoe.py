@@ -18,9 +18,9 @@ def print_board(initial=False):
     """
     print(('''
              {} | {} | {} 
-            -----------
+            --------------
              {} | {} | {}
-            -----------
+            --------------
              {} | {} | {} 
         ''').format(*([x for x in range(1, 10)] if initial else boxes)))
 
@@ -34,7 +34,7 @@ def take_turn(player, turn):
         if player is COMPUTER:
             box = get_computer_move()
         else:
-            box = input('Player %s, type a number from 1-9 to select a box: ' % player)
+            box = input(f'Player {player}, type a number from 1-9 to select a box: ')
 
             try:
                 box = int(box) - 1 # subtract 1 to sync with boxes[] index numbers
