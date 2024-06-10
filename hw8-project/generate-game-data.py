@@ -27,14 +27,19 @@ import matplotlib.pyplot as plt
 
 ''' the above works, let's create a function to simulate 1000 or so games '''
 
-def create_game_data(n_runs: int) -> np.ndarray:
+def create_game_data(n_runs: int) -> tuple:
     
     ''' in this case lets assign X to be 1 and O to be -1, not that it really matters lol '''
+    
+    ''' returns a tuple of arrays --> (game board data, recorded win combos)'''
 
     output = None
     entry = 1
+    wins_data = np.zeros(8)
 
     for simulation in range(n_runs):
+
+        entry *= -1 # alternate who starts each game
 
         game_board = np.zeros(9)  # vector of 9 empty elements
         win = False
@@ -56,10 +61,13 @@ def create_game_data(n_runs: int) -> np.ndarray:
                 winning_combos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6],
                                   [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
             
-                for combo in winning_combos:
+                for idx, combo in enumerate(winning_combos):
+
                     if game_board[combo[0]] and game_board[combo[1]] and game_board[combo[2]]:
                         if game_board[combo[0]] == game_board[combo[1]] == game_board[combo[2]]:
+
                             win = True
+                            wins_data[idx] += 1
                             break
             
             if win:
@@ -73,40 +81,43 @@ def create_game_data(n_runs: int) -> np.ndarray:
             output = np.vstack([output, np.array(game_board)])
 
 
-    return output
+    return (output, wins_data)
 
 
-test_data = create_game_data(1000)
+# test_data = create_game_data(1000)
 
 # for x in range(test_data.shape[0]):
 #     print(test_data[x,:].reshape(3, 3), '\n')
 
 
-''' let's analyze the data for any outstanding statistical significance by finding a distribution of common win combos '''
+''' deprecated this function and added its functionality into create_game_data() '''
 
-def evalute_game_wins(test_data) -> np.ndarray:
+# def evalute_game_wins(test_data) -> np.ndarray:
 
-    winning_combos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6],
-                      [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+#     winning_combos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6],
+#                       [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 
-    wins_data = np.zeros(8) # one space for each possibe win combo
+#     wins_data = np.zeros(8) # one space for each possibe win combo
 
-    for game in range(test_data.shape[0]):
+#     for game in range(test_data.shape[0]):
 
-        current_game = test_data[game, :]
+#         current_game = test_data[game, :]
 
-        for idx, combo in enumerate(winning_combos):
+#         for idx, combo in enumerate(winning_combos):
             
-            if current_game[combo[0]] == current_game[combo[1]] == current_game[combo[2]]:
-                wins_data[idx] += 1
+#             if current_game[combo[0]] == current_game[combo[1]] == current_game[combo[2]]:
+#                 wins_data[idx] += 1
 
-    return wins_data
+#     return wins_data
 
 
 
-wins_data = evalute_game_wins(test_data)
-
+data = create_game_data(10_000)
+board_data = data[0]
+wins_data = data[1]
+print(np.sum(wins_data))
 
 plt.plot(wins_data)
 plt.title('Instances of each win combination')
+
 plt.show()
