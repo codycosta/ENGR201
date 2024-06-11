@@ -3,27 +3,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# game_board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']  # vector of 9 empty elements
-# print(len(game_board))
-# entry = 1
-
-# for turn in range(len(game_board)):
-    
-#     spot = np.random.randint(0, len(game_board) - 1)
-#     print(spot)
-#     print(game_board[spot])
-
-#     while game_board[spot] != ' ':
-#         spot = np.random.randint(0, len(game_board) - 1)
-
-#     game_board[spot] = entry
-
-#     entry *= -1
-    
-# print(game_board)   # test to be sure the board filled properly
-
-# print(np.array(game_board).reshape(3, 3))   # visualize on a 3 x 3 grid
-
 
 ''' the above works, let's create a function to simulate 1000 or so games '''
 
@@ -84,40 +63,15 @@ def create_game_data(n_runs: int) -> tuple:
     return (output, wins_data)
 
 
-# test_data = create_game_data(1000)
+for n in range(4):
+    data = create_game_data(10000)
+    board_data = data[0]
+    wins_data = data[1]
 
-# for x in range(test_data.shape[0]):
-#     print(test_data[x,:].reshape(3, 3), '\n')
+    # print(data[0].reshape(3, 3))
+    # print(np.sum(wins_data))
 
-
-''' deprecated this function and added its functionality into create_game_data() '''
-
-# def evalute_game_wins(test_data) -> np.ndarray:
-
-#     winning_combos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6],
-#                       [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-
-#     wins_data = np.zeros(8) # one space for each possibe win combo
-
-#     for game in range(test_data.shape[0]):
-
-#         current_game = test_data[game, :]
-
-#         for idx, combo in enumerate(winning_combos):
-            
-#             if current_game[combo[0]] == current_game[combo[1]] == current_game[combo[2]]:
-#                 wins_data[idx] += 1
-
-#     return wins_data
-
-
-
-data = create_game_data(10_000)
-board_data = data[0]
-wins_data = data[1]
-print(np.sum(wins_data))
-
-plt.plot(wins_data)
+    plt.plot(wins_data)
 plt.title('Instances of each win combination')
 
 plt.show()
