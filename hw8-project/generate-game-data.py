@@ -1,4 +1,4 @@
-''' script to generate some random tic tac toe game data for n games '''
+''' script to generate some random tic tac toe game data for n games played at complete random, no thinking by computers involved '''
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -75,3 +75,9 @@ for n in range(4):
 plt.title('Instances of each win combination')
 
 plt.show()
+
+
+''' reuslts show by random chance that winning_combos 7 and 8 (last 2 entries) appear the most, at about 15% each
+    the rest of the entries appear between 5 to 10% of the time
+     
+    since random analysis prefers these 2 combos over the rest, we can make the computer seek to win via these combos '''
