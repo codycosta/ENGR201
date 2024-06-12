@@ -1,3 +1,4 @@
+
 ''' script to generate some random tic tac toe game data for n games played at complete random, no thinking by computers involved '''
 
 import numpy as np
@@ -15,6 +16,7 @@ def create_game_data(n_runs: int) -> tuple:
     output = None
     entry = 1
     wins_data = np.zeros(8)
+    num_moves_per_win = []
 
     for simulation in range(n_runs):
 
@@ -47,6 +49,7 @@ def create_game_data(n_runs: int) -> tuple:
 
                             win = True
                             wins_data[idx] += 1
+                            num_moves_per_win.append(np.sum(np.abs(game_board)))
                             break
             
             if win:
@@ -60,21 +63,36 @@ def create_game_data(n_runs: int) -> tuple:
             output = np.vstack([output, np.array(game_board)])
 
 
-    return (output, wins_data)
+    return (output, wins_data, num_moves_per_win)
 
 
-for n in range(4):
-    data = create_game_data(10000)
-    board_data = data[0]
-    wins_data = data[1]
 
-    # print(data[0].reshape(3, 3))
-    # print(np.sum(wins_data))
+data = create_game_data(20_000)
+board_data = data[0]
+wins_data = data[1]
+moves_data = data[2]
 
-    plt.plot(wins_data)
+# print(moves_data)
+plt.hist(moves_data)
+plt.title('Moves Taken Until Game is Won')
+plt.show()
+
+# print(data[0].reshape(3, 3))
+# print(np.sum(wins_data))
+
+plt.plot(wins_data)
 plt.title('Instances of each win combination')
 
 plt.show()
+
+# print(wins_data)
+
+# num_moves = np.sum(np.abs(board_data), axis=1)
+# print(num_moves.shape)
+
+# plt.hist(num_moves)
+# plt.show()
+
 
 
 ''' reuslts show by random chance that winning_combos 7 and 8 (last 2 entries) appear the most, at about 15% each

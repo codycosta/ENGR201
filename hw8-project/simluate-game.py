@@ -1,4 +1,5 @@
-''' medium level bot to play tic tac toe, will defend but not play offense when given the choice '''
+
+''' medium level bot to play tic tac toe, will play offense and defense, in that order... hopefully '''
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -21,29 +22,30 @@ def print_board(game_board):
             output.append(' ')
 
     print(('''
-             {} | {} | {} 
-            --------------
-             {} | {} | {}
-            --------------
-             {} | {} | {} 
+              {} | {} | {} 
+            -------------
+              {} | {} | {}
+            -------------
+              {} | {} | {} 
         ''').format(*([x for x in output])))
     
 
 winning_combos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6],
                   [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 
-''' from generate-game-data.py, the computers finished with a win in combos 7 and 8, 
+''' from generate-game-data.py, the computers finished most often with a win in combos 7 and 8, 
     so let's reverse the order of the list to check for possible wins with these combos first '''
 
 winning_combos.reverse()
 # print(winning_combos)
-    
+
 
 game_board = np.zeros(9)
-    
+
 entry = 1
 win = False
-    
+
+
 for turn in range(9):
 
     '''' check for imminent win '''
@@ -53,9 +55,11 @@ for turn in range(9):
         # win_possible = False
         # win_com = None
 
+
         # if you are about to win, play some O
 
-        if game_board[combo[0]] + game_board[combo[1]] + game_board[combo[2]] == 2 * entry:
+        # if game_board[combo[0]] + game_board[combo[1]] + game_board[combo[2]] == 2 * entry:
+        if np.sum(game_board[combo]) == 2 * entry:
 
             ''' find empty spot '''
             empty_spot = None
@@ -70,9 +74,11 @@ for turn in range(9):
             entry *= -1
             break
     
+
         # if opponent is about to win, play some D
 
-        elif game_board[combo[0]] + game_board[combo[1]] + game_board[combo[2]] == -2 * entry:
+        # elif game_board[combo[0]] + game_board[combo[1]] + game_board[combo[2]] == -2 * entry:
+        elif np.sum(game_board[combo]) == -2 * entry:
 
             ''' find empty spot '''
             empty_spot = None
@@ -101,7 +107,9 @@ for turn in range(9):
         game_board[spot] = entry
         entry *= -1
 
+
     print_board(game_board)
+
 
     ''' check for win condition '''
 
