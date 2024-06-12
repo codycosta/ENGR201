@@ -1,0 +1,6 @@
+Things to keep in mind for statistical analysis of tic tac toe games:
+
+1. probability of winning the game if player moves first
+2. probability of winning based on what the first move was
+3. probability of winning in certain formations (which winning combos appear the most)
+
