@@ -1,0 +1,14 @@
+This project will be using the 'ufo-data' files in this same folder
+
+We will initially do some mundane statistical analysis on the data to find any patterns
+
+If we do see some patterns in the data, we can build our analysis out around that concept and try to establish a link between otherwise independent variables/atributes
+
+Otherwise let's just have some fun with it 
+
+
+Data breakdown:
+The data inside of the files is UFO sightings within the US, that's about it 
+The columns of the csv file include info based on when the sighting was recorded and where
+Some of these entries may already be debunked and can't honeslty be taken seriously, but whatever, it's still usable data
+We have 1000 data entries so far (and that might be the upper limit honestly)
