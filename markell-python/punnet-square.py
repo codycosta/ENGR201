@@ -28,7 +28,7 @@ elif method == 'while':
 
     while j < repetitions:
     
-        main_procedure()
+        main_procedure(dominant, recessive)
 
         if repetitions > 1 and j != repetitions - 1:
             ask_to_proceed()
