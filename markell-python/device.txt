@@ -1,0 +1,8 @@
+Name: <__main__.Beam object at 0x000001445E2A8980>, {'mass': 1.0, 'length': 2.0, 'width': 3.0, 'height': 4.0}
+Name: <__main__.Piston object at 0x000001445E518190>, {'pressure': 100, 'stroke': 4, 'temperature': 2000, 'radius': 0.5, 'specific_heat': 4.15}
+Name: <__main__.Pulley object at 0x000001445E2AA120>, {'radius': 5.0, 'wrap_angle': 6.0, 'tension': 7.0, 'mass': 8.0}
+Name: <__main__.Wedge object at 0x000001445E2A9D30>, {'angle': 9.0, 'length': 10.0, 'height': 11.0, 'width': 12.0}
+Name: <__main__.Piston object at 0x000001445E2AACF0>, {'pressure': 13.0, 'stroke': 14.0, 'temperature': 15.0, 'radius': 16.0, 'specific_heat': 17.0}
+Name: <__main__.Wedge object at 0x000001445E5182D0>, {'angle': 0.7853981633974483, 'length': 5, 'height': 2, 'width': 1.5}
+Name: <__main__.Piston object at 0x000001445E518550>, {'pressure': 20, 'stroke': 3, 'temperature': 500, 'radius': 2.1, 'specific_heat': 4.222}
+Name: <__main__.Beam object at 0x000001445E518690>, {'mass': 300, 'length': 1, 'width': 1.1, 'height': 10}
