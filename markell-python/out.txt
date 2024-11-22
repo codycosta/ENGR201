@@ -1,0 +1,104 @@
+
+*****************************************************************************************************************
+Part 1-2: Class Definitions and Object Manipulations
+*****************************************************************************************************************
+
+Creating Beam class instance:
+
+enter a mass:           1
+enter a length:         2
+enter a width:          3
+enter a height:         4
+
+Creating Pulley class instance:
+
+enter a radius:         5
+enter a wrap angle:             6
+enter a tension force:          7
+enter a mass:           8
+
+Creating Wedge class instance:
+
+enter an angle:         9
+enter a length:         10
+enter a height:         11
+enter a width:          12
+
+Creating Piston class instance:
+
+enter a pressure:               13
+enter a stroke length:          14
+enter a temperature in K:               15
+enter a radius:         16
+enter specific heat of material:                17
+
+Machines list:
+[<__main__.Beam object at 0x000001445E2A8980>, <__main__.Piston object at 0x000001445E518190>, <__main__.Pulley object at 0x000001445E2AA120>, <__main__.Wedge object at 0x000001445E2A9D30>, <__main__.Piston object at 0x000001445E2AACF0>]
+
+Machines indices 2-4:
+[<__main__.Piston object at 0x000001445E518190>, <__main__.Pulley object at 0x000001445E2AA120>, <__main__.Wedge object at 0x000001445E2A9D30>]
+
+End of Machines list:
+<__main__.Wedge object at 0x000001445E5182D0>
+
+List length:    6
+
+Minimum user value given:       0.5
+
+Maximum user value given:       2000
+As a tuple:
+(<__main__.Beam object at 0x000001445E2A8980>, <__main__.Piston object at 0x000001445E518190>, <__main__.Pulley object at 0x000001445E2AA120>, <__main__.Wedge object at 0x000001445E2A9D30>, <__main__.Piston object at 0x000001445E2AACF0>, <__main__.Wedge object at 0x000001445E5182D0>)
+
+*****************************************************************************************************************
+Part 3: Writing Class Data to .txt files
+*****************************************************************************************************************
+
+File Output:
+
+
+Name: <__main__.Beam object at 0x000001445E2A8980>, {'mass': 1.0, 'length': 2.0, 'width': 3.0, 'height': 4.0}
+
+Name: <__main__.Piston object at 0x000001445E518190>, {'pressure': 100, 'stroke': 4, 'temperature': 2000, 'radius': 0.5, 'specific_heat': 4.15}
+
+Name: <__main__.Pulley object at 0x000001445E2AA120>, {'radius': 5.0, 'wrap_angle': 6.0, 'tension': 7.0, 'mass': 8.0}
+
+Name: <__main__.Wedge object at 0x000001445E2A9D30>, {'angle': 9.0, 'length': 10.0, 'height': 11.0, 'width': 12.0}
+
+Name: <__main__.Piston object at 0x000001445E2AACF0>, {'pressure': 13.0, 'stroke': 14.0, 'temperature': 15.0, 'radius': 16.0, 'specific_heat': 17.0}
+
+Name: <__main__.Wedge object at 0x000001445E5182D0>, {'angle': 0.7853981633974483, 'length': 5, 'height': 2, 'width': 1.5}
+
+Name: <__main__.Piston object at 0x000001445E518550>, {'pressure': 20, 'stroke': 3, 'temperature': 500, 'radius': 2.1, 'specific_heat': 4.222}
+
+Name: <__main__.Beam object at 0x000001445E518690>, {'mass': 300, 'length': 1, 'width': 1.1, 'height': 10}
+
+
+*****************************************************************************************************************
+Part 4: Dictionaries
+*****************************************************************************************************************
+Enter a driver's license number:        F00000000000
+Submission not found. Enter a valid driver's license number:    F1234567
+
+Results:        Birth Year: 2005        Last name: Smith        Fee Paid: $100
+
+
+File Output:
+'License Number': ['F1234567', 'F9876543', 'F0101010'],
+'Fee': [100, 150, 200]
+
+
+*****************************************************************************************************************
+Part 5: Sets
+*****************************************************************************************************************
+
+Original Set of Machines:
+{<__main__.Beam object at 0x000001445E2A8980>, <__main__.Piston object at 0x000001445E518190>, <__main__.Pulley object at 0x000001445E2AA120>}
+
+Machine Set Lenght:     3
+
+Set of Machines:
+{'o', 't', 'l', 'e', 'v', <__main__.Pulley object at 0x000001445E2AA120>, 'i', <__main__.Beam object at 0x000001445E2A8980>, <__main__.Piston object at 0x000001445E518190>}
+
+Revised Set of Machines:
+{'o', 't', 'l', 'e', <__main__.Pulley object at 0x000001445E2AA120>, 'i', <__main__.Beam object at 0x000001445E2A8980>, <__main__.Piston object at 0x000001445E518190>}
+*****************************************************************************************************************
