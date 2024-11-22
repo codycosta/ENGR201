@@ -97,14 +97,16 @@ class Piston:
     def get_all_attrs_by_value(self) -> list:
         return [self.pressure, self.stroke, self.temperature, self.radius, self.specific_heat]
     
-# output print
-
 
 # *****************************************************************************************************************
 # Part 2:   Class Instances using FOR or WHILE loop
 # *****************************************************************************************************************
 classes = ['Beam', 'Pulley', 'Wedge', 'Piston']
 machines = []
+
+print('\n*****************************************************************************************************************')
+print('Part 1-2: Class Definitions and Object Manipulations')
+print('*****************************************************************************************************************')
 
 for machine in classes:
     # create each machine class
@@ -151,19 +153,19 @@ for machine in classes:
 machines.insert(1, Piston(100, 4, 2000, 0.5, 4.15))
 
 # print list
-print(machines)
+print(f'\nMachines list:\n{machines}')
 
 # print 2nd - 4th list entries
-print(machines[1:4])
+print(f'\nMachines indices 2-4:\n{machines[1:4]}')
 
 # # add another machine to end
 machines.append(Wedge(math.pi / 4, 5, 2, 1.5))
 
 # print last entry
-print(machines[-1])
+print(f'\nEnd of Machines list:\n{machines[-1]}')
 
 # print num machines
-print(len(machines))
+print(f'\nList length:\t{len(machines)}')
 
 # print max and min values on list ?
 min_max_attrs = []
@@ -171,17 +173,23 @@ for machine in machines:
     min_max_attrs.append(min(machine.get_all_attrs_by_value()))
     min_max_attrs.append(max(machine.get_all_attrs_by_value()))
 
-print(min(min_max_attrs))
-print(max(min_max_attrs))
+print(f'\nMinimum user value given:\t{min(min_max_attrs)}')
+print(f'\nMaximum user value given:\t{max(min_max_attrs)}')
 
 # change to a tuple
 machines = tuple(machines)
-print(machines)
+print(f'As a tuple:\n{machines}')
+
+print('\n*****************************************************************************************************************')
 
 
 # *****************************************************************************************************************
 # Part 3: .txt file writing
 # *****************************************************************************************************************
+
+print('Part 3: Writing Class Data to .txt files')
+print('*****************************************************************************************************************')
+print('\nFile Output:\n\n')
 filename = 'device.txt'
 with open(filename, 'w') as F:
 
@@ -205,10 +213,16 @@ F.close()
 print(f'Name: {mech7}, {vars(mech7)}\n')
 print(f'Name: {mech8}, {vars(mech8)}\n')
 
+print('\n*****************************************************************************************************************')
+
 
 # *****************************************************************************************************************
 # Part 4: Dictionaries and file writing
 # *****************************************************************************************************************
+
+print('Part 4: Dictionaries')
+print('*****************************************************************************************************************')
+
 test_takers_birthyear = {
     'License Number': ['F1234567', 'F9876543', 'F0101010'],
     'Birth Year': [2005, 2006, 2007]
@@ -242,7 +256,6 @@ filename_json = 'test_takers_feespaid.json'
 with open(filename_json, 'w') as FJ:
     json.dump(test_takers_feespaid, FJ)
 
-
 # write to csv file
 filename_csv = 'test_takers_feespaid.csv'
 with open(filename_csv, 'w') as FC:
@@ -250,10 +263,24 @@ with open(filename_csv, 'w') as FC:
     writer.writeheader()
     writer.writerow(test_takers_feespaid)
 
+print(
+'''
+File Output:
+'License Number': ['F1234567', 'F9876543', 'F0101010'],
+'Fee': [100, 150, 200]
+'''
+)
+
+print('\n*****************************************************************************************************************')
+
 
 # *****************************************************************************************************************
 # Part 5: Sets
 # *****************************************************************************************************************
+
+print('Part 5: Sets')
+print('*****************************************************************************************************************')
+
 machineset = set(machines[:3])
 print(machineset)
 print(len(machineset))
@@ -262,7 +289,7 @@ color = 'violet'
 for char in color:
     machineset.add(char)
 
-print(machineset)
+print(f'\nSet of Machines:\n{machineset}')
 
 # with exception to letter 'v'
 if not 'v' in machineset:
@@ -272,5 +299,6 @@ else:
     # no exception
     machineset.remove('v')
 
-print(machineset)
+print(f'\nRevised Set of Machines:\n{machineset}')
 
+print('*****************************************************************************************************************\n')
