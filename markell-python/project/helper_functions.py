@@ -1,4 +1,4 @@
-# user defined functions for zoo.py
+# user defined functions exported to zoo.py
 
 import random
 import datetime
@@ -136,14 +136,14 @@ def display_zoo_data(ZOO):
                     print(f'{name}: {data['species']}, {data['age']} years, {data['personality']}, {data['diet']}\n')
 
             case '7-Day Feed Log':
-                print('7-Day Feed Log')
+                print('\n7-Day Feed Log')
                 print('*' * 30)
                 for name in ZOO[key].keys():
                     data = ZOO[key][name]
                     print(f'{name}:\nbreakfasts: {data['breakfasts']}\nlunches: {data['lunches']}\ndinners: {data['dinners']}\n')
 
             case 'Health Status':
-                print('Animal Health Status')
+                print('\nAnimal Health Status')
                 print('*' * 30)
                 for name in ZOO[key].keys():        
                     print(f'{name}:\t{ZOO[key][name]}')

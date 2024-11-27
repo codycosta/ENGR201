@@ -1,0 +1,66 @@
+out.txt
+
+Enter zoo population size [1 - 50]:     5
+
+Generating zoo with animal population of 5
+******************************
+
+List of common animal names within animal-names.txt:
+['Max', 'Charlie', 'Bella', 'Poppy', 'Daisy', 'Buster', 'Alfie', 'Millie', 'Molly', 'Rosie', 'Buddy', 'Barney', 'Lola', 'Roxy', 'Ruby', 'Tilly', 'Bailey', 'Marley', 'Tia', 'Bonnie', 'Toby', 'Milo', 'Archie', 'Holly', 'Lucy', 'Lexi', 'Bruno', 'Rocky', 'Sasha', 'Billy', 'Gerbil', 'Bear', 'LUNA', 'Oscar', 'Jack', 'Lady', 'Willow', 'Tyson', 'Benji', 'Jake', 'Jess', 'Teddy', 'Coco', 'Murphy', 'Sky', 'Honey', 'Lilly', 'Lily', 'Monty', 'Patch', 'Rolo', 'Harry', 'Maisy', 'Pippa', 'Trixie', 'Bruce', 'Dexter', 'Freddie', 'Jasper', 'Shadow', 'Milly', 'Missy', 'Pepper', 'Rex', 'Sally', 'Zeus', 'Bobby', 'Harvey', 'Lucky', 'Ollie', 'Pip', 'Sam', 'Storm', 'Amber', 'Belle', 'Cooper', 'Fudge', 'Meg', 'Minnie', 'Ozzy', 'Ralph', 'Tess', 'Dave', 'Diesel', 'George', 'Jessie', 'Leo', 'Lottie', 'Louie', 'Prince', 'Reggie', 'Simba', 'Skye', 'Basil', 'Betsy', 'Chase', 'Dolly', 'Frankie', 'Lulu', 'Maggie']
+
+List of common medical issues within health-conditions.txt:
+['Arthritis', 'Bloat & Gastric Torsion', 'Cancer', 'Canine Parvovirus', 'Diabetes Millitus', 'Distemper', 'Epilepsy', 'Fleas', ' Ticks & Mites', 'Gastric Dilation Volvulus', 'Hip Dysplasia', 'Hypothyroidism', 'Leptospirosis', 'Liver Shunt', 'Luxating Patella', 'Obesity', 'Parasite & Worms', 'Ruptured Anterior Cruciate Ligament', 'Salmonella', 'Seizures', 'Vertigo', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy']
+
+List of common animal personalities within personalities.txt:
+['shy', 'happy', 'sociable', 'bold', 'exploratory', 'anxious', 'supportive', 'creative', 'gentle', 'playful', 'energetic', 'aloof', 'outgoing', 'introverted', 'curious', 'compassionate']
+
+
+Animal Info
+******************************
+Coco: goat, 36 years, happy, carnivore
+
+Skye: goat, 25 years, exploratory, carnivore
+
+Cooper: lizard, 16 years, playful, carnivore
+
+Toby: monkey, 19 years, exploratory, carnivore
+
+Bruce: hippo, 14 years, creative, omnivore
+
+
+7-Day Feed Log
+******************************
+Coco:
+breakfasts: {'2024/11/19-7:28': 'veal', '2024/11/20-8:55': 'fish', '2024/11/21-6:05': 'veal', '2024/11/22-7:28': 'fish', '2024/11/23-8:06': 'fish', '2024/11/24-8:09': 'chicken', '2024/11/25-7:59': 'veal', '2024/11/26-9:27': 'veal'}
+lunches: {'2024/11/19-14:28': 'veal', '2024/11/20-13:55': 'chicken', '2024/11/21-12:05': 'chicken', '2024/11/22-14:28': 'fish', '2024/11/23-15:06': 'veal', '2024/11/24-13:09': 'fish', '2024/11/25-14:59': 'fish', '2024/11/26-15:27': 'chicken'}
+dinners: {'2024/11/19-19:28': 'fish', '2024/11/20-20:55': 'chicken', '2024/11/21-21:05': 'chicken', '2024/11/22-21:28': 'chicken', '2024/11/23-19:06': 'chicken', '2024/11/24-22:09': 'chicken', '2024/11/25-21:59': 'fish', '2024/11/26-21:27': 'veal'}
+
+Skye:
+breakfasts: {'2024/11/19-6:16': 'fish', '2024/11/20-7:44': 'fish', '2024/11/21-9:07': 'veal', '2024/11/22-6:24': 'veal', '2024/11/23-8:53': 'chicken', '2024/11/24-8:43': 'veal', '2024/11/25-8:26': 'fish', '2024/11/26-9:02': 'veal'}
+lunches: {'2024/11/19-12:16': 'chicken', '2024/11/20-13:44': 'chicken', '2024/11/21-15:07': 'chicken', '2024/11/22-12:24': 'veal', '2024/11/23-13:53': 'chicken', '2024/11/24-15:43': 'fish', '2024/11/25-13:26': 'chicken', '2024/11/26-15:02': 'veal'}
+dinners: {'2024/11/19-22:16': 'veal', '2024/11/20-21:44': 'veal', '2024/11/21-21:07': 'chicken', '2024/11/22-19:24': 'fish', '2024/11/23-21:53': 'fish', '2024/11/24-20:43': 'chicken', '2024/11/25-22:26': 'fish', '2024/11/26-19:02': 'chicken'}
+
+Cooper:
+breakfasts: {'2024/11/19-6:04': 'veal', '2024/11/20-8:19': 'chicken', '2024/11/21-6:59': 'fish', '2024/11/22-9:06': 'chicken', '2024/11/23-9:15': 'fish', '2024/11/24-9:43': 'chicken', '2024/11/25-7:03': 'fish', '2024/11/26-8:41': 'chicken'}
+lunches: {'2024/11/19-13:04': 'fish', '2024/11/20-12:19': 'chicken', '2024/11/21-13:59': 'chicken', '2024/11/22-15:06': 'chicken', '2024/11/23-12:15': 'fish', '2024/11/24-12:43': 'veal', '2024/11/25-12:03': 'veal', '2024/11/26-14:41': 'veal'}
+dinners: {'2024/11/19-20:04': 'veal', '2024/11/20-22:19': 'chicken', '2024/11/21-21:59': 'veal', '2024/11/22-20:06': 'chicken', '2024/11/23-21:15': 'chicken', '2024/11/24-20:43': 'veal', '2024/11/25-22:03': 'fish', '2024/11/26-21:41': 'fish'}
+
+Toby:
+breakfasts: {'2024/11/19-9:32': 'veal', '2024/11/20-7:01': 'fish', '2024/11/21-7:29': 'fish', '2024/11/22-9:29': 'chicken', '2024/11/23-6:22': 'veal', '2024/11/24-6:26': 'veal', '2024/11/25-6:08': 'fish', '2024/11/26-8:47': 'chicken'}
+lunches: {'2024/11/19-12:32': 'veal', '2024/11/20-12:01': 'veal', '2024/11/21-12:29': 'veal', '2024/11/22-13:29': 'fish', '2024/11/23-13:22': 'veal', '2024/11/24-12:26': 'fish', '2024/11/25-15:08': 'chicken', '2024/11/26-12:47': 'chicken'}
+dinners: {'2024/11/19-21:32': 'chicken', '2024/11/20-19:01': 'fish', '2024/11/21-20:29': 'veal', '2024/11/22-19:29': 'veal', '2024/11/23-22:22': 'chicken', '2024/11/24-20:26': 'chicken', '2024/11/25-19:08': 'chicken', '2024/11/26-20:47': 'chicken'}
+
+Bruce:
+breakfasts: {'2024/11/19-6:55': 'chicken', '2024/11/20-8:33': 'veal', '2024/11/21-9:33': 'veal', '2024/11/22-8:09': 'leaves', '2024/11/23-7:54': 'grass', '2024/11/24-6:47': 'fish', '2024/11/25-8:42': 'plants', '2024/11/26-7:49': 'fish'}
+lunches: {'2024/11/19-12:55': 'grass', '2024/11/20-14:33': 'fish', '2024/11/21-15:33': 'fish', '2024/11/22-12:09': 'plants', '2024/11/23-12:54': 'plants', '2024/11/24-13:47': 'veal', '2024/11/25-12:42': 'veal', '2024/11/26-13:49': 'plants'}
+dinners: {'2024/11/19-21:55': 'leaves', '2024/11/20-20:33': 'veal', '2024/11/21-21:33': 'leaves', '2024/11/22-20:09': 'chicken', '2024/11/23-22:54': 'grass', '2024/11/24-22:47': 'fish', '2024/11/25-19:42': 'chicken', '2024/11/26-22:49': 'veal'}
+
+
+Animal Health Status
+******************************
+Coco:   healthy
+Skye:   Seizures
+Cooper: Canine Parvovirus
+Toby:   Fleas
+Bruce:  healthy
+
