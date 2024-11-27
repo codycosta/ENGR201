@@ -120,3 +120,32 @@ def generate_feeding_logs(animals, carnivorous_foods, herbivorous_foods) -> dict
         }
 
     return feeding_data
+
+
+def display_zoo_data(ZOO):
+
+    # get ZOO dict keys
+    for key in ZOO.keys():
+
+        match key:
+            case 'Animals':
+                print('\nAnimal Info')
+                print('*' * 30)
+                for name in ZOO[key].keys():
+                    data = ZOO[key][name]
+                    print(f'{name}: {data['species']}, {data['age']} years, {data['personality']}, {data['diet']}\n')
+
+            case '7-Day Feed Log':
+                print('7-Day Feed Log')
+                print('*' * 30)
+                for name in ZOO[key].keys():
+                    data = ZOO[key][name]
+                    print(f'{name}:\nbreakfasts: {data['breakfasts']}\nlunches: {data['lunches']}\ndinners: {data['dinners']}\n')
+
+            case 'Health Status':
+                print('Animal Health Status')
+                print('*' * 30)
+                for name in ZOO[key].keys():        
+                    print(f'{name}:\t{ZOO[key][name]}')
+
+    print()
