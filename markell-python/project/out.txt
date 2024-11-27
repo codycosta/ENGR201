@@ -1,15 +1,16 @@
 out.txt
 
-Enter zoo population size [1 - 50]:     5
+Generating zoo with animal population of 33
+******************************
 
-Generating zoo with animal population of 5
+Reference data:
 ******************************
 
 List of common animal names within animal-names.txt:
 ['Max', 'Charlie', 'Bella', 'Poppy', 'Daisy', 'Buster', 'Alfie', 'Millie', 'Molly', 'Rosie', 'Buddy', 'Barney', 'Lola', 'Roxy', 'Ruby', 'Tilly', 'Bailey', 'Marley', 'Tia', 'Bonnie', 'Toby', 'Milo', 'Archie', 'Holly', 'Lucy', 'Lexi', 'Bruno', 'Rocky', 'Sasha', 'Billy', 'Gerbil', 'Bear', 'LUNA', 'Oscar', 'Jack', 'Lady', 'Willow', 'Tyson', 'Benji', 'Jake', 'Jess', 'Teddy', 'Coco', 'Murphy', 'Sky', 'Honey', 'Lilly', 'Lily', 'Monty', 'Patch', 'Rolo', 'Harry', 'Maisy', 'Pippa', 'Trixie', 'Bruce', 'Dexter', 'Freddie', 'Jasper', 'Shadow', 'Milly', 'Missy', 'Pepper', 'Rex', 'Sally', 'Zeus', 'Bobby', 'Harvey', 'Lucky', 'Ollie', 'Pip', 'Sam', 'Storm', 'Amber', 'Belle', 'Cooper', 'Fudge', 'Meg', 'Minnie', 'Ozzy', 'Ralph', 'Tess', 'Dave', 'Diesel', 'George', 'Jessie', 'Leo', 'Lottie', 'Louie', 'Prince', 'Reggie', 'Simba', 'Skye', 'Basil', 'Betsy', 'Chase', 'Dolly', 'Frankie', 'Lulu', 'Maggie']
 
 List of common medical issues within health-conditions.txt:
-['Arthritis', 'Bloat & Gastric Torsion', 'Cancer', 'Canine Parvovirus', 'Diabetes Millitus', 'Distemper', 'Epilepsy', 'Fleas', ' Ticks & Mites', 'Gastric Dilation Volvulus', 'Hip Dysplasia', 'Hypothyroidism', 'Leptospirosis', 'Liver Shunt', 'Luxating Patella', 'Obesity', 'Parasite & Worms', 'Ruptured Anterior Cruciate Ligament', 'Salmonella', 'Seizures', 'Vertigo', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy']
+['Arthritis', 'Bloat & Gastric Torsion', 'Cancer', 'Parvovirus', 'Diabetes Millitus', 'Distemper', 'Epilepsy', 'Fleas', ' Ticks & Mites', 'Gastric Dilation Volvulus', 'Hip Dysplasia', 'Hypothyroidism', 'Leptospirosis', 'Liver Shunt', 'Luxating Patella', 'Obesity', 'Parasite & Worms', 'Ruptured Anterior Cruciate Ligament', 'Salmonella', 'Seizures', 'Vertigo', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy', 'healthy']
 
 List of common animal personalities within personalities.txt:
 ['shy', 'happy', 'sociable', 'bold', 'exploratory', 'anxious', 'supportive', 'creative', 'gentle', 'playful', 'energetic', 'aloof', 'outgoing', 'introverted', 'curious', 'compassionate']
@@ -17,50 +18,273 @@ List of common animal personalities within personalities.txt:
 
 Animal Info
 ******************************
-Coco: goat, 36 years, happy, carnivore
+Jake: camel, 21 years, creative, herbivore
 
-Skye: goat, 25 years, exploratory, carnivore
+Bruno: giraffe, 5 years, bold, omnivore
 
-Cooper: lizard, 16 years, playful, carnivore
+Harry: camel, 1 years, gentle, omnivore
 
-Toby: monkey, 19 years, exploratory, carnivore
+Ralph: lion, 43 years, introverted, herbivore
 
-Bruce: hippo, 14 years, creative, omnivore
+Millie: lizard, 36 years, aloof, omnivore
+
+Jasper: hippo, 37 years, aloof, herbivore
+
+Max: owl, 37 years, compassionate, carnivore
+
+Roxy: rhino, 20 years, aloof, herbivore
+
+Skye: lizard, 44 years, supportive, omnivore
+
+Maggie: elephant, 46 years, compassionate, herbivore
+
+Sasha: giraffe, 43 years, sociable, omnivore
+
+Bear: bear, 11 years, anxious, carnivore
+
+Lily: giraffe, 28 years, happy, carnivore
+
+Jack: lizard, 28 years, compassionate, carnivore
+
+Shadow: whale, 47 years, anxious, omnivore
+
+Trixie: tiger, 35 years, creative, omnivore
+
+Freddie: whale, 32 years, curious, omnivore
+
+Coco: giraffe, 31 years, shy, omnivore
+
+Betsy: camel, 39 years, energetic, carnivore
+
+Barney: lion, 35 years, curious, herbivore
+
+Milo: rhino, 24 years, aloof, herbivore
+
+Bruce: rhino, 9 years, gentle, herbivore
+
+Poppy: tortoise, 41 years, creative, herbivore
+
+Storm: flamingo, 41 years, aloof, omnivore
+
+Louie: whale, 40 years, curious, carnivore
+
+Basil: owl, 22 years, introverted, herbivore
+
+Diesel: flamingo, 23 years, introverted, herbivore
+
+Meg: flamingo, 31 years, aloof, carnivore
+
+Lola: lion, 5 years, anxious, herbivore
+
+Lilly: zebra, 22 years, gentle, carnivore
+
+George: fish, 30 years, gentle, omnivore
+
+Tess: lion, 24 years, curious, herbivore
+
+Prince: whale, 1 years, gentle, omnivore
 
 
 7-Day Feed Log
 ******************************
-Coco:
-breakfasts: {'2024/11/19-7:28': 'veal', '2024/11/20-8:55': 'fish', '2024/11/21-6:05': 'veal', '2024/11/22-7:28': 'fish', '2024/11/23-8:06': 'fish', '2024/11/24-8:09': 'chicken', '2024/11/25-7:59': 'veal', '2024/11/26-9:27': 'veal'}
-lunches: {'2024/11/19-14:28': 'veal', '2024/11/20-13:55': 'chicken', '2024/11/21-12:05': 'chicken', '2024/11/22-14:28': 'fish', '2024/11/23-15:06': 'veal', '2024/11/24-13:09': 'fish', '2024/11/25-14:59': 'fish', '2024/11/26-15:27': 'chicken'}
-dinners: {'2024/11/19-19:28': 'fish', '2024/11/20-20:55': 'chicken', '2024/11/21-21:05': 'chicken', '2024/11/22-21:28': 'chicken', '2024/11/23-19:06': 'chicken', '2024/11/24-22:09': 'chicken', '2024/11/25-21:59': 'fish', '2024/11/26-21:27': 'veal'}
+Jake:
+breakfasts: {'2024/11/19-9:33': 'chicken', '2024/11/20-8:23': 'grass', '2024/11/21-7:07': 'leaves', '2024/11/22-9:12': 'fish', '2024/11/23-6:15': 'plants', '2024/11/24-8:38': 'chicken', '2024/11/25-6:13': 'grass', '2024/11/26-7:05': 'veal'}
+lunches: {'2024/11/19-14:33': 'fish', '2024/11/20-13:23': 'grass', '2024/11/21-13:07': 'plants', '2024/11/22-12:12': 'veal', '2024/11/23-12:15': 'veal', '2024/11/24-14:38': 'grass', '2024/11/25-15:13': 'fish', '2024/11/26-13:05': 'plants'}
+dinners: {'2024/11/19-21:33': 'plants', '2024/11/20-20:23': 'grass', '2024/11/21-22:07': 'leaves', '2024/11/22-19:12': 'veal', '2024/11/23-19:15': 'chicken', '2024/11/24-19:38': 'plants', '2024/11/25-19:13': 'chicken', '2024/11/26-22:05': 'fish'}
+
+Bruno:
+breakfasts: {'2024/11/19-7:18': 'grass', '2024/11/20-7:39': 'plants', '2024/11/21-9:52': 'plants', '2024/11/22-7:37': 'grass', '2024/11/23-7:27': 'veal', '2024/11/24-9:29': 'grass', '2024/11/25-9:15': 'grass', '2024/11/26-7:50': 'grass'}
+lunches: {'2024/11/19-12:18': 'leaves', '2024/11/20-14:39': 'leaves', '2024/11/21-12:52': 'fish', '2024/11/22-15:37': 'grass', '2024/11/23-12:27': 'veal', '2024/11/24-15:29': 'veal', '2024/11/25-12:15': 'chicken', '2024/11/26-14:50': 'veal'}
+dinners: {'2024/11/19-22:18': 'grass', '2024/11/20-19:39': 'fish', '2024/11/21-22:52': 'veal', '2024/11/22-22:37': 'plants', '2024/11/23-21:27': 'fish', '2024/11/24-22:29': 'grass', '2024/11/25-19:15': 'chicken', '2024/11/26-21:50': 'grass'}
+
+Harry:
+breakfasts: {'2024/11/19-9:12': 'fish', '2024/11/20-6:50': 'fish', '2024/11/21-8:52': 'leaves', '2024/11/22-7:03': 'plants', '2024/11/23-8:09': 'chicken', '2024/11/24-9:31': 'grass', '2024/11/25-9:04': 'fish', '2024/11/26-7:43': 'grass'}
+lunches: {'2024/11/19-13:12': 'veal', '2024/11/20-12:50': 'grass', '2024/11/21-12:52': 'chicken', '2024/11/22-13:03': 'fish', '2024/11/23-15:09': 'leaves', '2024/11/24-12:31': 'plants', '2024/11/25-13:04': 'veal', '2024/11/26-15:43': 'veal'}
+dinners: {'2024/11/19-20:12': 'chicken', '2024/11/20-19:50': 'fish', '2024/11/21-22:52': 'plants', '2024/11/22-21:03': 'veal', '2024/11/23-19:09': 'grass', '2024/11/24-20:31': 'chicken', '2024/11/25-22:04': 'grass', '2024/11/26-20:43': 'veal'}
+
+Ralph:
+breakfasts: {'2024/11/19-8:37': 'leaves', '2024/11/20-6:51': 'chicken', '2024/11/21-7:25': 'plants', '2024/11/22-6:42': 'plants', '2024/11/23-8:40': 'leaves', '2024/11/24-8:11': 'fish', '2024/11/25-7:30': 'veal', '2024/11/26-7:52': 'plants'}
+lunches: {'2024/11/19-14:37': 'leaves', '2024/11/20-15:51': 'leaves', '2024/11/21-12:25': 'plants', '2024/11/22-12:42': 'chicken', '2024/11/23-14:40': 'grass', '2024/11/24-15:11': 'plants', '2024/11/25-14:30': 'grass', '2024/11/26-15:52': 'chicken'}
+dinners: {'2024/11/19-19:37': 'plants', '2024/11/20-21:51': 'veal', '2024/11/21-22:25': 'grass', '2024/11/22-20:42': 'grass', '2024/11/23-22:40': 'leaves', '2024/11/24-20:11': 'chicken', '2024/11/25-21:30': 'chicken', '2024/11/26-20:52': 'chicken'}
+
+Millie:
+breakfasts: {'2024/11/19-9:43': 'plants', '2024/11/20-6:34': 'chicken', '2024/11/21-8:03': 'fish', '2024/11/22-9:15': 'chicken', '2024/11/23-7:42': 'fish', '2024/11/24-8:21': 'leaves', '2024/11/25-9:50': 'leaves', '2024/11/26-6:16': 'chicken'}
+lunches: {'2024/11/19-15:43': 'plants', '2024/11/20-12:34': 'veal', '2024/11/21-13:03': 'grass', '2024/11/22-13:15': 'fish', '2024/11/23-13:42': 'leaves', '2024/11/24-15:21': 'fish', '2024/11/25-15:50': 'grass', '2024/11/26-15:16': 'veal'}
+dinners: {'2024/11/19-19:43': 'fish', '2024/11/20-20:34': 'veal', '2024/11/21-21:03': 'grass', '2024/11/22-19:15': 'leaves', '2024/11/23-21:42': 'plants', '2024/11/24-19:21': 'chicken', '2024/11/25-19:50': 'chicken', '2024/11/26-21:16': 'fish'}
+
+Jasper:
+breakfasts: {'2024/11/19-7:58': 'leaves', '2024/11/20-9:17': 'fish', '2024/11/21-8:36': 'grass', '2024/11/22-7:55': 'fish', '2024/11/23-8:33': 'fish', '2024/11/24-6:01': 'fish', '2024/11/25-9:11': 'veal', '2024/11/26-6:55': 'veal'}
+lunches: {'2024/11/19-15:58': 'veal', '2024/11/20-13:17': 'grass', '2024/11/21-12:36': 'veal', '2024/11/22-14:55': 'veal', '2024/11/23-15:33': 'grass', '2024/11/24-12:01': 'chicken', '2024/11/25-12:11': 'chicken', '2024/11/26-15:55': 'grass'}
+dinners: {'2024/11/19-21:58': 'chicken', '2024/11/20-22:17': 'chicken', '2024/11/21-21:36': 'veal', '2024/11/22-19:55': 'fish', '2024/11/23-19:33': 'fish', '2024/11/24-22:01': 'veal', '2024/11/25-20:11': 'leaves', '2024/11/26-19:55': 'grass'}
+
+Max:
+breakfasts: {'2024/11/19-6:07': 'veal', '2024/11/20-9:22': 'fish', '2024/11/21-6:03': 'fish', '2024/11/22-9:19': 'chicken', '2024/11/23-6:52': 'veal', '2024/11/24-7:15': 'veal', '2024/11/25-7:38': 'veal', '2024/11/26-6:39': 'chicken'}
+lunches: {'2024/11/19-14:07': 'fish', '2024/11/20-14:22': 'veal', '2024/11/21-15:03': 'fish', '2024/11/22-12:19': 'chicken', '2024/11/23-15:52': 'fish', '2024/11/24-14:15': 'chicken', '2024/11/25-13:38': 'chicken', '2024/11/26-12:39': 'fish'}
+dinners: {'2024/11/19-19:07': 'veal', '2024/11/20-19:22': 'fish', '2024/11/21-20:03': 'chicken', '2024/11/22-22:19': 'veal', '2024/11/23-21:52': 'chicken', '2024/11/24-22:15': 'veal', '2024/11/25-22:38': 'chicken', '2024/11/26-20:39': 'fish'}
+
+Roxy:
+breakfasts: {'2024/11/19-9:53': 'leaves', '2024/11/20-6:44': 'leaves', '2024/11/21-6:11': 'grass', '2024/11/22-8:18': 'leaves', '2024/11/23-7:29': 'grass', '2024/11/24-6:38': 'veal', '2024/11/25-9:21': 'chicken', '2024/11/26-7:48': 'chicken'}
+lunches: {'2024/11/19-12:53': 'leaves', '2024/11/20-12:44': 'leaves', '2024/11/21-12:11': 'veal', '2024/11/22-14:18': 'plants', '2024/11/23-14:29': 'fish', '2024/11/24-14:38': 'leaves', '2024/11/25-12:21': 'veal', '2024/11/26-12:48': 'chicken'}
+dinners: {'2024/11/19-20:53': 'chicken', '2024/11/20-22:44': 'chicken', '2024/11/21-21:11': 'fish', '2024/11/22-20:18': 'chicken', '2024/11/23-19:29': 'chicken', '2024/11/24-21:38': 'fish', '2024/11/25-19:21': 'grass', '2024/11/26-22:48': 'plants'}
 
 Skye:
-breakfasts: {'2024/11/19-6:16': 'fish', '2024/11/20-7:44': 'fish', '2024/11/21-9:07': 'veal', '2024/11/22-6:24': 'veal', '2024/11/23-8:53': 'chicken', '2024/11/24-8:43': 'veal', '2024/11/25-8:26': 'fish', '2024/11/26-9:02': 'veal'}
-lunches: {'2024/11/19-12:16': 'chicken', '2024/11/20-13:44': 'chicken', '2024/11/21-15:07': 'chicken', '2024/11/22-12:24': 'veal', '2024/11/23-13:53': 'chicken', '2024/11/24-15:43': 'fish', '2024/11/25-13:26': 'chicken', '2024/11/26-15:02': 'veal'}
-dinners: {'2024/11/19-22:16': 'veal', '2024/11/20-21:44': 'veal', '2024/11/21-21:07': 'chicken', '2024/11/22-19:24': 'fish', '2024/11/23-21:53': 'fish', '2024/11/24-20:43': 'chicken', '2024/11/25-22:26': 'fish', '2024/11/26-19:02': 'chicken'}
+breakfasts: {'2024/11/19-8:54': 'chicken', '2024/11/20-6:40': 'plants', '2024/11/21-7:43': 'grass', '2024/11/22-6:20': 'chicken', '2024/11/23-8:43': 'fish', '2024/11/24-6:31': 'grass', '2024/11/25-8:32': 'fish', '2024/11/26-6:49': 'fish'}
+lunches: {'2024/11/19-12:54': 'fish', '2024/11/20-15:40': 'plants', '2024/11/21-15:43': 'plants', '2024/11/22-12:20': 'grass', '2024/11/23-14:43': 'veal', '2024/11/24-12:31': 'leaves', '2024/11/25-15:32': 'fish', '2024/11/26-12:49': 'grass'}
+dinners: {'2024/11/19-19:54': 'plants', '2024/11/20-20:40': 'grass', '2024/11/21-21:43': 'chicken', '2024/11/22-20:20': 'veal', '2024/11/23-22:43': 'grass', '2024/11/24-19:31': 'chicken', '2024/11/25-19:32': 'plants', '2024/11/26-21:49': 'fish'}
 
-Cooper:
-breakfasts: {'2024/11/19-6:04': 'veal', '2024/11/20-8:19': 'chicken', '2024/11/21-6:59': 'fish', '2024/11/22-9:06': 'chicken', '2024/11/23-9:15': 'fish', '2024/11/24-9:43': 'chicken', '2024/11/25-7:03': 'fish', '2024/11/26-8:41': 'chicken'}
-lunches: {'2024/11/19-13:04': 'fish', '2024/11/20-12:19': 'chicken', '2024/11/21-13:59': 'chicken', '2024/11/22-15:06': 'chicken', '2024/11/23-12:15': 'fish', '2024/11/24-12:43': 'veal', '2024/11/25-12:03': 'veal', '2024/11/26-14:41': 'veal'}
-dinners: {'2024/11/19-20:04': 'veal', '2024/11/20-22:19': 'chicken', '2024/11/21-21:59': 'veal', '2024/11/22-20:06': 'chicken', '2024/11/23-21:15': 'chicken', '2024/11/24-20:43': 'veal', '2024/11/25-22:03': 'fish', '2024/11/26-21:41': 'fish'}
+Maggie:
+breakfasts: {'2024/11/19-7:35': 'chicken', '2024/11/20-9:07': 'fish', '2024/11/21-9:11': 'fish', '2024/11/22-8:48': 'grass', '2024/11/23-7:31': 'chicken', '2024/11/24-7:15': 'veal', '2024/11/25-9:40': 'chicken', '2024/11/26-8:30': 'chicken'}
+lunches: {'2024/11/19-15:35': 'plants', '2024/11/20-12:07': 'fish', '2024/11/21-15:11': 'veal', '2024/11/22-14:48': 'leaves', '2024/11/23-13:31': 'leaves', '2024/11/24-13:15': 'chicken', '2024/11/25-15:40': 'leaves', '2024/11/26-13:30': 'leaves'}
+dinners: {'2024/11/19-21:35': 'plants', '2024/11/20-19:07': 'leaves', '2024/11/21-19:11': 'leaves', '2024/11/22-20:48': 'grass', '2024/11/23-21:31': 'grass', '2024/11/24-19:15': 'grass', '2024/11/25-19:40': 'chicken', '2024/11/26-20:30': 'veal'}
 
-Toby:
-breakfasts: {'2024/11/19-9:32': 'veal', '2024/11/20-7:01': 'fish', '2024/11/21-7:29': 'fish', '2024/11/22-9:29': 'chicken', '2024/11/23-6:22': 'veal', '2024/11/24-6:26': 'veal', '2024/11/25-6:08': 'fish', '2024/11/26-8:47': 'chicken'}
-lunches: {'2024/11/19-12:32': 'veal', '2024/11/20-12:01': 'veal', '2024/11/21-12:29': 'veal', '2024/11/22-13:29': 'fish', '2024/11/23-13:22': 'veal', '2024/11/24-12:26': 'fish', '2024/11/25-15:08': 'chicken', '2024/11/26-12:47': 'chicken'}
-dinners: {'2024/11/19-21:32': 'chicken', '2024/11/20-19:01': 'fish', '2024/11/21-20:29': 'veal', '2024/11/22-19:29': 'veal', '2024/11/23-22:22': 'chicken', '2024/11/24-20:26': 'chicken', '2024/11/25-19:08': 'chicken', '2024/11/26-20:47': 'chicken'}
+Sasha:
+breakfasts: {'2024/11/19-8:45': 'leaves', '2024/11/20-9:10': 'grass', '2024/11/21-7:45': 'grass', '2024/11/22-6:58': 'leaves', '2024/11/23-6:37': 'veal', '2024/11/24-9:28': 'grass', '2024/11/25-6:11': 'chicken', '2024/11/26-9:42': 'fish'}
+lunches: {'2024/11/19-12:45': 'grass', '2024/11/20-15:10': 'chicken', '2024/11/21-13:45': 'fish', '2024/11/22-12:58': 'plants', '2024/11/23-13:37': 'fish', '2024/11/24-13:28': 'veal', '2024/11/25-13:11': 'veal', '2024/11/26-12:42': 'leaves'}
+dinners: {'2024/11/19-21:45': 'veal', '2024/11/20-21:10': 'chicken', '2024/11/21-19:45': 'chicken', '2024/11/22-20:58': 'plants', '2024/11/23-19:37': 'fish', '2024/11/24-22:28': 'leaves', '2024/11/25-20:11': 'veal', '2024/11/26-21:42': 'leaves'}
+
+Bear:
+breakfasts: {'2024/11/19-7:12': 'fish', '2024/11/20-9:31': 'chicken', '2024/11/21-7:08': 'chicken', '2024/11/22-8:04': 'veal', '2024/11/23-9:21': 'fish', '2024/11/24-6:46': 'chicken', '2024/11/25-6:17': 'veal', '2024/11/26-7:36': 'fish'}
+lunches: {'2024/11/19-15:12': 'veal', '2024/11/20-15:31': 'fish', '2024/11/21-14:08': 'fish', '2024/11/22-14:04': 'chicken', '2024/11/23-12:21': 'fish', '2024/11/24-13:46': 'chicken', '2024/11/25-15:17': 'fish', '2024/11/26-13:36': 'veal'}
+dinners: {'2024/11/19-21:12': 'chicken', '2024/11/20-20:31': 'chicken', '2024/11/21-21:08': 'chicken', '2024/11/22-22:04': 'chicken', '2024/11/23-20:21': 'fish', '2024/11/24-19:46': 'veal', '2024/11/25-21:17': 'fish', '2024/11/26-19:36': 'fish'}
+
+Lily:
+breakfasts: {'2024/11/19-9:20': 'veal', '2024/11/20-8:59': 'chicken', '2024/11/21-6:12': 'veal', '2024/11/22-6:49': 'fish', '2024/11/23-8:31': 'veal', '2024/11/24-8:12': 'chicken', '2024/11/25-8:39': 'chicken', '2024/11/26-8:18': 'fish'}
+lunches: {'2024/11/19-14:20': 'fish', '2024/11/20-12:59': 'chicken', '2024/11/21-12:12': 'chicken', '2024/11/22-12:49': 'chicken', '2024/11/23-14:31': 'chicken', '2024/11/24-12:12': 'chicken', '2024/11/25-15:39': 'chicken', '2024/11/26-12:18': 'veal'}
+dinners: {'2024/11/19-20:20': 'chicken', '2024/11/20-20:59': 'veal', '2024/11/21-22:12': 'chicken', '2024/11/22-22:49': 'chicken', '2024/11/23-22:31': 'fish', '2024/11/24-21:12': 'veal', '2024/11/25-22:39': 'fish', '2024/11/26-19:18': 'chicken'}
+
+Jack:
+breakfasts: {'2024/11/19-7:31': 'veal', '2024/11/20-9:08': 'veal', '2024/11/21-8:27': 'fish', '2024/11/22-7:53': 'fish', '2024/11/23-7:00': 'fish', '2024/11/24-9:42': 'chicken', '2024/11/25-8:04': 'fish', '2024/11/26-6:51': 'veal'}
+lunches: {'2024/11/19-13:31': 'fish', '2024/11/20-12:08': 'chicken', '2024/11/21-15:27': 'veal', '2024/11/22-13:53': 'fish', '2024/11/23-15:00': 'chicken', '2024/11/24-13:42': 'chicken', '2024/11/25-13:04': 'veal', '2024/11/26-13:51': 'veal'}
+dinners: {'2024/11/19-19:31': 'chicken', '2024/11/20-20:08': 'veal', '2024/11/21-20:27': 'chicken', '2024/11/22-22:53': 'veal', '2024/11/23-20:00': 'fish', '2024/11/24-20:42': 'fish', '2024/11/25-19:04': 'fish', '2024/11/26-20:51': 'veal'}
+
+Shadow:
+breakfasts: {'2024/11/19-7:39': 'veal', '2024/11/20-6:39': 'grass', '2024/11/21-8:06': 'plants', '2024/11/22-7:46': 'plants', '2024/11/23-6:25': 'plants', '2024/11/24-6:01': 'chicken', '2024/11/25-8:51': 'fish', '2024/11/26-9:47': 'fish'}
+lunches: {'2024/11/19-15:39': 'plants', '2024/11/20-15:39': 'plants', '2024/11/21-15:06': 'fish', '2024/11/22-12:46': 'fish', '2024/11/23-13:25': 'fish', '2024/11/24-15:01': 'grass', '2024/11/25-12:51': 'plants', '2024/11/26-13:47': 'leaves'}
+dinners: {'2024/11/19-20:39': 'chicken', '2024/11/20-21:39': 'chicken', '2024/11/21-21:06': 'fish', '2024/11/22-20:46': 'leaves', '2024/11/23-20:25': 'grass', '2024/11/24-19:01': 'veal', '2024/11/25-19:51': 'chicken', '2024/11/26-22:47': 'leaves'}
+
+Trixie:
+breakfasts: {'2024/11/19-9:56': 'plants', '2024/11/20-8:04': 'veal', '2024/11/21-6:08': 'plants', '2024/11/22-8:09': 'veal', '2024/11/23-6:22': 'leaves', '2024/11/24-6:54': 'grass', '2024/11/25-8:46': 'veal', '2024/11/26-6:24': 'chicken'}
+lunches: {'2024/11/19-13:56': 'grass', '2024/11/20-14:04': 'fish', '2024/11/21-12:08': 'plants', '2024/11/22-15:09': 'chicken', '2024/11/23-15:22': 'leaves', '2024/11/24-15:54': 'fish', '2024/11/25-13:46': 'plants', '2024/11/26-15:24': 'fish'}
+dinners: {'2024/11/19-22:56': 'fish', '2024/11/20-19:04': 'veal', '2024/11/21-21:08': 'fish', '2024/11/22-20:09': 'grass', '2024/11/23-22:22': 'chicken', '2024/11/24-21:54': 'fish', '2024/11/25-21:46': 'veal', '2024/11/26-21:24': 'grass'}
+
+Freddie:
+breakfasts: {'2024/11/19-6:48': 'veal', '2024/11/20-9:45': 'plants', '2024/11/21-8:14': 'chicken', '2024/11/22-9:12': 'veal', '2024/11/23-7:40': 'fish', '2024/11/24-6:14': 'fish', '2024/11/25-9:45': 'grass', '2024/11/26-6:03': 'veal'}
+lunches: {'2024/11/19-12:48': 'leaves', '2024/11/20-14:45': 'veal', '2024/11/21-15:14': 'leaves', '2024/11/22-13:12': 'plants', '2024/11/23-12:40': 'leaves', '2024/11/24-14:14': 'fish', '2024/11/25-12:45': 'grass', '2024/11/26-12:03': 'plants'}
+dinners: {'2024/11/19-19:48': 'leaves', '2024/11/20-19:45': 'veal', '2024/11/21-22:14': 'chicken', '2024/11/22-20:12': 'leaves', '2024/11/23-20:40': 'fish', '2024/11/24-21:14': 'fish', '2024/11/25-20:45': 'chicken', '2024/11/26-21:03': 'leaves'}
+
+Coco:
+breakfasts: {'2024/11/19-6:57': 'plants', '2024/11/20-7:04': 'fish', '2024/11/21-6:40': 'leaves', '2024/11/22-8:48': 'chicken', '2024/11/23-7:03': 'chicken', '2024/11/24-6:23': 'grass', '2024/11/25-7:06': 'fish', '2024/11/26-9:01': 'plants'}
+lunches: {'2024/11/19-12:57': 'leaves', '2024/11/20-14:04': 'leaves', '2024/11/21-12:40': 'plants', '2024/11/22-12:48': 'fish', '2024/11/23-12:03': 'leaves', '2024/11/24-13:23': 'veal', '2024/11/25-13:06': 'fish', '2024/11/26-13:01': 'fish'}
+dinners: {'2024/11/19-22:57': 'grass', '2024/11/20-19:04': 'grass', '2024/11/21-20:40': 'veal', '2024/11/22-22:48': 'veal', '2024/11/23-21:03': 'fish', '2024/11/24-20:23': 'plants', '2024/11/25-21:06': 'veal', '2024/11/26-20:01': 'chicken'}
+
+Betsy:
+breakfasts: {'2024/11/19-9:46': 'fish', '2024/11/20-8:16': 'fish', '2024/11/21-9:28': 'fish', '2024/11/22-9:07': 'fish', '2024/11/23-9:21': 'fish', '2024/11/24-6:24': 'fish', '2024/11/25-7:12': 'fish', '2024/11/26-9:39': 'chicken'}
+lunches: {'2024/11/19-15:46': 'chicken', '2024/11/20-13:16': 'fish', '2024/11/21-13:28': 'chicken', '2024/11/22-12:07': 'chicken', '2024/11/23-13:21': 'veal', '2024/11/24-13:24': 'veal', '2024/11/25-12:12': 'fish', '2024/11/26-13:39': 'veal'}
+dinners: {'2024/11/19-21:46': 'fish', '2024/11/20-20:16': 'chicken', '2024/11/21-20:28': 'veal', '2024/11/22-22:07': 'chicken', '2024/11/23-21:21': 'chicken', '2024/11/24-22:24': 'fish', '2024/11/25-22:12': 'veal', '2024/11/26-19:39': 'chicken'}
+
+Barney:
+breakfasts: {'2024/11/19-6:22': 'chicken', '2024/11/20-7:56': 'plants', '2024/11/21-8:00': 'leaves', '2024/11/22-7:55': 'leaves', '2024/11/23-8:01': 'chicken', '2024/11/24-7:57': 'leaves', '2024/11/25-6:10': 'leaves', '2024/11/26-8:27': 'veal'}
+lunches: {'2024/11/19-12:22': 'plants', '2024/11/20-13:56': 'leaves', '2024/11/21-15:00': 'grass', '2024/11/22-15:55': 'grass', '2024/11/23-14:01': 'plants', '2024/11/24-15:57': 'leaves', '2024/11/25-13:10': 'veal', '2024/11/26-12:27': 'veal'}
+dinners: {'2024/11/19-21:22': 'chicken', '2024/11/20-21:56': 'grass', '2024/11/21-22:00': 'grass', '2024/11/22-21:55': 'plants', '2024/11/23-21:01': 'chicken', '2024/11/24-20:57': 'veal', '2024/11/25-19:10': 'leaves', '2024/11/26-19:27': 'chicken'}
+
+Milo:
+breakfasts: {'2024/11/19-7:05': 'veal', '2024/11/20-9:06': 'fish', '2024/11/21-6:25': 'grass', '2024/11/22-8:50': 'leaves', '2024/11/23-6:39': 'grass', '2024/11/24-8:25': 'plants', '2024/11/25-7:45': 'plants', '2024/11/26-9:18': 'leaves'}
+lunches: {'2024/11/19-13:05': 'veal', '2024/11/20-13:06': 'fish', '2024/11/21-14:25': 'veal', '2024/11/22-13:50': 'fish', '2024/11/23-12:39': 'leaves', '2024/11/24-14:25': 'chicken', '2024/11/25-12:45': 'leaves', '2024/11/26-15:18': 'grass'}
+dinners: {'2024/11/19-21:05': 'plants', '2024/11/20-19:06': 'fish', '2024/11/21-22:25': 'chicken', '2024/11/22-20:50': 'veal', '2024/11/23-21:39': 'plants', '2024/11/24-19:25': 'chicken', '2024/11/25-22:45': 'grass', '2024/11/26-22:18': 'chicken'}
 
 Bruce:
-breakfasts: {'2024/11/19-6:55': 'chicken', '2024/11/20-8:33': 'veal', '2024/11/21-9:33': 'veal', '2024/11/22-8:09': 'leaves', '2024/11/23-7:54': 'grass', '2024/11/24-6:47': 'fish', '2024/11/25-8:42': 'plants', '2024/11/26-7:49': 'fish'}
-lunches: {'2024/11/19-12:55': 'grass', '2024/11/20-14:33': 'fish', '2024/11/21-15:33': 'fish', '2024/11/22-12:09': 'plants', '2024/11/23-12:54': 'plants', '2024/11/24-13:47': 'veal', '2024/11/25-12:42': 'veal', '2024/11/26-13:49': 'plants'}
-dinners: {'2024/11/19-21:55': 'leaves', '2024/11/20-20:33': 'veal', '2024/11/21-21:33': 'leaves', '2024/11/22-20:09': 'chicken', '2024/11/23-22:54': 'grass', '2024/11/24-22:47': 'fish', '2024/11/25-19:42': 'chicken', '2024/11/26-22:49': 'veal'}
+breakfasts: {'2024/11/19-6:55': 'leaves', '2024/11/20-8:48': 'plants', '2024/11/21-9:51': 'plants', '2024/11/22-7:33': 'grass', '2024/11/23-7:25': 'chicken', '2024/11/24-8:18': 'leaves', '2024/11/25-6:50': 'chicken', '2024/11/26-7:20': 'chicken'}
+lunches: {'2024/11/19-14:55': 'grass', '2024/11/20-13:48': 'grass', '2024/11/21-12:51': 'grass', '2024/11/22-12:33': 'fish', '2024/11/23-13:25': 'leaves', '2024/11/24-14:18': 'chicken', '2024/11/25-12:50': 'fish', '2024/11/26-14:20': 'leaves'}
+dinners: {'2024/11/19-20:55': 'leaves', '2024/11/20-20:48': 'fish', '2024/11/21-22:51': 'chicken', '2024/11/22-21:33': 'plants', '2024/11/23-20:25': 'chicken', '2024/11/24-21:18': 'plants', '2024/11/25-20:50': 'fish', '2024/11/26-20:20': 'veal'}
+
+Poppy:
+breakfasts: {'2024/11/19-7:34': 'chicken', '2024/11/20-6:31': 'chicken', '2024/11/21-8:39': 'fish', '2024/11/22-8:04': 'leaves', '2024/11/23-6:18': 'grass', '2024/11/24-7:31': 'veal', '2024/11/25-8:07': 'veal', '2024/11/26-7:07': 'grass'}
+lunches: {'2024/11/19-13:34': 'chicken', '2024/11/20-12:31': 'plants', '2024/11/21-12:39': 'veal', '2024/11/22-14:04': 'veal', '2024/11/23-13:18': 'plants', '2024/11/24-14:31': 'plants', '2024/11/25-13:07': 'chicken', '2024/11/26-12:07': 'leaves'}
+dinners: {'2024/11/19-19:34': 'plants', '2024/11/20-21:31': 'leaves', '2024/11/21-21:39': 'chicken', '2024/11/22-21:04': 'chicken', '2024/11/23-20:18': 'leaves', '2024/11/24-19:31': 'leaves', '2024/11/25-20:07': 'veal', '2024/11/26-21:07': 'leaves'}
+
+Storm:
+breakfasts: {'2024/11/19-6:42': 'grass', '2024/11/20-8:11': 'fish', '2024/11/21-8:41': 'leaves', '2024/11/22-6:16': 'fish', '2024/11/23-9:55': 'leaves', '2024/11/24-9:07': 'grass', '2024/11/25-6:00': 'veal', '2024/11/26-9:00': 'plants'}
+lunches: {'2024/11/19-13:42': 'leaves', '2024/11/20-14:11': 'fish', '2024/11/21-15:41': 'leaves', '2024/11/22-12:16': 'chicken', '2024/11/23-15:55': 'veal', '2024/11/24-12:07': 'grass', '2024/11/25-13:00': 'leaves', '2024/11/26-15:00': 'veal'}
+dinners: {'2024/11/19-22:42': 'chicken', '2024/11/20-22:11': 'grass', '2024/11/21-20:41': 'leaves', '2024/11/22-20:16': 'veal', '2024/11/23-22:55': 'grass', '2024/11/24-22:07': 'chicken', '2024/11/25-20:00': 'fish', '2024/11/26-20:00': 'grass'}
+
+Louie:
+breakfasts: {'2024/11/19-8:45': 'veal', '2024/11/20-7:31': 'chicken', '2024/11/21-6:06': 'chicken', '2024/11/22-8:28': 'chicken', '2024/11/23-9:29': 'fish', '2024/11/24-7:46': 'fish', '2024/11/25-7:22': 'fish', '2024/11/26-6:12': 'chicken'}
+lunches: {'2024/11/19-15:45': 'veal', '2024/11/20-12:31': 'fish', '2024/11/21-13:06': 'fish', '2024/11/22-15:28': 'chicken', '2024/11/23-12:29': 'fish', '2024/11/24-12:46': 'veal', '2024/11/25-14:22': 'fish', '2024/11/26-14:12': 'veal'}
+dinners: {'2024/11/19-19:45': 'fish', '2024/11/20-20:31': 'fish', '2024/11/21-21:06': 'veal', '2024/11/22-19:28': 'veal', '2024/11/23-21:29': 'chicken', '2024/11/24-22:46': 'chicken', '2024/11/25-21:22': 'fish', '2024/11/26-19:12': 'chicken'}
+
+Basil:
+breakfasts: {'2024/11/19-8:43': 'chicken', '2024/11/20-9:34': 'fish', '2024/11/21-6:39': 'chicken', '2024/11/22-8:00': 'veal', '2024/11/23-7:11': 'leaves', '2024/11/24-7:19': 'veal', '2024/11/25-7:31': 'veal', '2024/11/26-9:42': 'grass'}
+lunches: {'2024/11/19-12:43': 'fish', '2024/11/20-12:34': 'plants', '2024/11/21-12:39': 'leaves', '2024/11/22-14:00': 'grass', '2024/11/23-15:11': 'chicken', '2024/11/24-15:19': 'veal', '2024/11/25-13:31': 'veal', '2024/11/26-15:42': 'veal'}
+dinners: {'2024/11/19-19:43': 'fish', '2024/11/20-22:34': 'leaves', '2024/11/21-19:39': 'veal', '2024/11/22-21:00': 'plants', '2024/11/23-22:11': 'plants', '2024/11/24-21:19': 'plants', '2024/11/25-19:31': 'veal', '2024/11/26-22:42': 'leaves'}
+
+Diesel:
+breakfasts: {'2024/11/19-8:42': 'veal', '2024/11/20-9:39': 'plants', '2024/11/21-8:32': 'leaves', '2024/11/22-6:40': 'plants', '2024/11/23-6:59': 'fish', '2024/11/24-8:12': 'veal', '2024/11/25-6:10': 'leaves', '2024/11/26-6:58': 'fish'}
+lunches: {'2024/11/19-13:42': 'fish', '2024/11/20-15:39': 'chicken', '2024/11/21-14:32': 'veal', '2024/11/22-12:40': 'leaves', '2024/11/23-12:59': 'leaves', '2024/11/24-15:12': 'leaves', '2024/11/25-12:10': 'grass', '2024/11/26-13:58': 'fish'}
+dinners: {'2024/11/19-22:42': 'plants', '2024/11/20-20:39': 'chicken', '2024/11/21-22:32': 'veal', '2024/11/22-22:40': 'veal', '2024/11/23-19:59': 'veal', '2024/11/24-22:12': 'fish', '2024/11/25-22:10': 'chicken', '2024/11/26-21:58': 'grass'}
+
+Meg:
+breakfasts: {'2024/11/19-8:04': 'chicken', '2024/11/20-8:21': 'chicken', '2024/11/21-7:41': 'chicken', '2024/11/22-7:39': 'chicken', '2024/11/23-9:01': 'veal', '2024/11/24-9:30': 'fish', '2024/11/25-7:17': 'fish', '2024/11/26-6:08': 'fish'}
+lunches: {'2024/11/19-12:04': 'fish', '2024/11/20-15:21': 'veal', '2024/11/21-15:41': 'fish', '2024/11/22-13:39': 'veal', '2024/11/23-13:01': 'fish', '2024/11/24-13:30': 'veal', '2024/11/25-13:17': 'veal', '2024/11/26-14:08': 'chicken'}
+dinners: {'2024/11/19-21:04': 'fish', '2024/11/20-22:21': 'fish', '2024/11/21-21:41': 'veal', '2024/11/22-21:39': 'veal', '2024/11/23-19:01': 'veal', '2024/11/24-20:30': 'fish', '2024/11/25-22:17': 'veal', '2024/11/26-19:08': 'chicken'}
+
+Lola:
+breakfasts: {'2024/11/19-7:16': 'plants', '2024/11/20-8:09': 'veal', '2024/11/21-9:45': 'leaves', '2024/11/22-6:36': 'grass', '2024/11/23-9:55': 'veal', '2024/11/24-7:10': 'plants', '2024/11/25-6:53': 'plants', '2024/11/26-9:51': 'leaves'}
+lunches: {'2024/11/19-13:16': 'plants', '2024/11/20-14:09': 'chicken', '2024/11/21-12:45': 'plants', '2024/11/22-15:36': 'leaves', '2024/11/23-13:55': 'fish', '2024/11/24-15:10': 'plants', '2024/11/25-14:53': 'chicken', '2024/11/26-14:51': 'fish'}
+dinners: {'2024/11/19-19:16': 'leaves', '2024/11/20-22:09': 'veal', '2024/11/21-22:45': 'leaves', '2024/11/22-20:36': 'grass', '2024/11/23-20:55': 'plants', '2024/11/24-22:10': 'plants', '2024/11/25-19:53': 'chicken', '2024/11/26-20:51': 'grass'}
+
+Lilly:
+breakfasts: {'2024/11/19-8:36': 'veal', '2024/11/20-8:29': 'chicken', '2024/11/21-6:09': 'fish', '2024/11/22-6:02': 'chicken', '2024/11/23-6:09': 'chicken', '2024/11/24-7:26': 'chicken', '2024/11/25-7:06': 'veal', '2024/11/26-7:46': 'fish'}
+lunches: {'2024/11/19-12:36': 'veal', '2024/11/20-13:29': 'fish', '2024/11/21-15:09': 'chicken', '2024/11/22-12:02': 'chicken', '2024/11/23-12:09': 'veal', '2024/11/24-13:26': 'fish', '2024/11/25-15:06': 'fish', '2024/11/26-12:46': 'chicken'}
+dinners: {'2024/11/19-19:36': 'fish', '2024/11/20-22:29': 'fish', '2024/11/21-20:09': 'veal', '2024/11/22-20:02': 'veal', '2024/11/23-19:09': 'chicken', '2024/11/24-21:26': 'fish', '2024/11/25-19:06': 'fish', '2024/11/26-22:46': 'chicken'}
+
+George:
+breakfasts: {'2024/11/19-6:57': 'leaves', '2024/11/20-9:58': 'fish', '2024/11/21-8:43': 'veal', '2024/11/22-9:22': 'chicken', '2024/11/23-9:26': 'leaves', '2024/11/24-6:54': 'fish', '2024/11/25-9:24': 'grass', '2024/11/26-8:15': 'leaves'}
+lunches: {'2024/11/19-15:57': 'chicken', '2024/11/20-13:58': 'fish', '2024/11/21-12:43': 'fish', '2024/11/22-14:22': 'plants', '2024/11/23-15:26': 'veal', '2024/11/24-13:54': 'leaves', '2024/11/25-13:24': 'leaves', '2024/11/26-12:15': 'chicken'}
+dinners: {'2024/11/19-21:57': 'plants', '2024/11/20-21:58': 'fish', '2024/11/21-20:43': 'leaves', '2024/11/22-20:22': 'leaves', '2024/11/23-19:26': 'veal', '2024/11/24-19:54': 'fish', '2024/11/25-19:24': 'grass', '2024/11/26-21:15': 'grass'}
+
+Tess:
+breakfasts: {'2024/11/19-7:17': 'plants', '2024/11/20-8:14': 'fish', '2024/11/21-6:35': 'plants', '2024/11/22-8:59': 'chicken', '2024/11/23-6:12': 'chicken', '2024/11/24-7:43': 'fish', '2024/11/25-6:03': 'chicken', '2024/11/26-7:45': 'leaves'}
+lunches: {'2024/11/19-12:17': 'grass', '2024/11/20-13:14': 'veal', '2024/11/21-12:35': 'chicken', '2024/11/22-15:59': 'leaves', '2024/11/23-13:12': 'veal', '2024/11/24-12:43': 'fish', '2024/11/25-12:03': 'veal', '2024/11/26-15:45': 'fish'}
+dinners: {'2024/11/19-20:17': 'chicken', '2024/11/20-19:14': 'fish', '2024/11/21-20:35': 'grass', '2024/11/22-21:59': 'leaves', '2024/11/23-22:12': 'chicken', '2024/11/24-22:43': 'veal', '2024/11/25-20:03': 'grass', '2024/11/26-19:45': 'veal'}
+
+Prince:
+breakfasts: {'2024/11/19-6:22': 'leaves', '2024/11/20-6:21': 'leaves', '2024/11/21-6:42': 'fish', '2024/11/22-7:38': 'veal', '2024/11/23-9:31': 'chicken', '2024/11/24-6:21': 'chicken', '2024/11/25-6:34': 'plants', '2024/11/26-7:09': 'veal'}
+lunches: {'2024/11/19-13:22': 'plants', '2024/11/20-15:21': 'grass', '2024/11/21-14:42': 'chicken', '2024/11/22-14:38': 'plants', '2024/11/23-15:31': 'grass', '2024/11/24-14:21': 'fish', '2024/11/25-14:34': 'veal', '2024/11/26-12:09': 'chicken'}
+dinners: {'2024/11/19-20:22': 'fish', '2024/11/20-20:21': 'chicken', '2024/11/21-22:42': 'fish', '2024/11/22-22:38': 'veal', '2024/11/23-21:31': 'grass', '2024/11/24-20:21': 'fish', '2024/11/25-22:34': 'chicken', '2024/11/26-22:09': 'grass'}
 
 
 Animal Health Status
 ******************************
-Coco:   healthy
-Skye:   Seizures
-Cooper: Canine Parvovirus
-Toby:   Fleas
-Bruce:  healthy
-
+Jake:	Parasite & Worms
+Bruno:	Seizures
+Harry:	Diabetes Millitus
+Ralph:	Liver Shunt
+Millie:	Luxating Patella
+Jasper:	healthy
+Max:	 Ticks & Mites
+Roxy:	Luxating Patella
+Skye:	Fleas
+Maggie:	Hip Dysplasia
+Sasha:	Diabetes Millitus
+Bear:	healthy
+Lily:	healthy
+Jack:	Luxating Patella
+Shadow:	Gastric Dilation Volvulus
+Trixie:	healthy
+Freddie:	healthy
+Coco:	Arthritis
+Betsy:	healthy
+Barney:	healthy
+Milo:	healthy
+Bruce:	healthy
+Poppy:	Fleas
+Storm:	Distemper
+Louie:	healthy
+Basil:	 Ticks & Mites
+Diesel:	healthy
+Meg:	Seizures
+Lola:	Fleas
+Lilly:	healthy
+George:	Bloat & Gastric Torsion
+Tess:	Vertigo
+Prince:	healthy

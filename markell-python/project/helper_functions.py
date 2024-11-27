@@ -122,30 +122,33 @@ def generate_feeding_logs(animals, carnivorous_foods, herbivorous_foods) -> dict
     return feeding_data
 
 
-def display_zoo_data(ZOO):
+def display_zoo_data(ZOO) -> str:
+
+    output = f''
 
     # get ZOO dict keys
     for key in ZOO.keys():
 
         match key:
             case 'Animals':
-                print('\nAnimal Info')
-                print('*' * 30)
+                output += '\nAnimal Info\n'
+                output += '*' * 30 + '\n'
                 for name in ZOO[key].keys():
                     data = ZOO[key][name]
-                    print(f'{name}: {data['species']}, {data['age']} years, {data['personality']}, {data['diet']}\n')
+                    output += f'{name}: {data['species']}, {data['age']} years, {data['personality']}, {data['diet']}\n\n'
 
             case '7-Day Feed Log':
-                print('\n7-Day Feed Log')
-                print('*' * 30)
+                output += '\n7-Day Feed Log\n'
+                output += '*' * 30 + '\n'
                 for name in ZOO[key].keys():
                     data = ZOO[key][name]
-                    print(f'{name}:\nbreakfasts: {data['breakfasts']}\nlunches: {data['lunches']}\ndinners: {data['dinners']}\n')
+                    output += f'{name}:\nbreakfasts: {data['breakfasts']}\nlunches: {data['lunches']}\ndinners: {data['dinners']}\n\n'
 
             case 'Health Status':
-                print('\nAnimal Health Status')
-                print('*' * 30)
+                output += '\nAnimal Health Status\n'
+                output += '*' * 30 + '\n'
                 for name in ZOO[key].keys():        
-                    print(f'{name}:\t{ZOO[key][name]}')
+                    output += f'{name}:\t{ZOO[key][name]}\n'
 
-    print()
+    # print()
+    return output

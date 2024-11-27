@@ -72,72 +72,83 @@ Out.txt will serve as the generated terminal history record once the program fin
 
 '''
 
+
 from helper_functions import *
 
-print('out.txt\n')
+outfile = 'out.txt'
+
+# start logging to outfile
+with open(outfile, 'w') as outfile:
+
+    print('out.txt\n')
+    outfile.write(f'out.txt\n')
 
 
-# Define the size of our zoo animal population
-POPULATION = None
-while POPULATION not in [f'{x}' for x in range(1, 51)]:
-    POPULATION = input('Enter zoo population size [1 - 50]:\t')
-POPULATION = int(POPULATION)
-print(f'\nGenerating zoo with animal population of {POPULATION}')
-print('*' * 30 + '\n')
+    # Define the size of our zoo animal population
+    POPULATION = None
+    while POPULATION not in [f'{x}' for x in range(1, 51)]:
+        POPULATION = input('Enter zoo population size [1 - 50]:\t')
+    POPULATION = int(POPULATION)
+    print(f'\nGenerating zoo with animal population of {POPULATION}')
+    print('*' * 30 + '\n')
+    outfile.write(f'\nGenerating zoo with animal population of {POPULATION}\n')
+    outfile.write('*' * 30 + '\n\n')
 
 
-# Let's start by creating a list of what animals should be included within our zoo :)
-zoo_animals_species = ['bear', 'lion', 'tiger', 'snake', 'zebra', 'giraffe', 'hippo', 'lizard', 'fish', 'panda', 'goat', 'camel', 'tortoise', 'sea turtle', 'whale', 'panther', 'elephant', 'rhino', 'flamingo', 'monkey', 'owl']
+    # Let's start by creating a list of what animals should be included within our zoo :)
+    zoo_animals_species = ['bear', 'lion', 'tiger', 'snake', 'zebra', 'giraffe', 'hippo', 'lizard', 'fish', 'panda', 'goat', 'camel', 'tortoise', 'sea turtle', 'whale', 'panther', 'elephant', 'rhino', 'flamingo', 'monkey', 'owl']
 
 
-# We can also create some subclasses of food preference of each animal
-diet = ['carnivore', 'herbivore', 'omnivore']
-carnivorous_foods = ['veal', 'chicken', 'fish']
-herbivorous_foods = ['plants', 'leaves', 'grass']
+    # We can also create some subclasses of food preference of each animal
+    diet = ['carnivore', 'herbivore', 'omnivore']
+    carnivorous_foods = ['veal', 'chicken', 'fish']
+    herbivorous_foods = ['plants', 'leaves', 'grass']
+
+    print('Refernce data:')
+    print('*' * 30 + '\n')
+    outfile.write('Reference data:\n')
+    outfile.write('*' * 30 + '\n\n')
+
+    # Now we need a list of animal names (sourced in animal-names.txt file created from https://www.bluecross.org.uk/sites/default/files/d8/downloads/Blue-Cross-top-100-pet-dog-names.pdf)
+    with open('animal-names.txt', 'r') as file:
+        common_animal_names = file.readline().split(' ')
+    print(f'List of common animal names within animal-names.txt:\n{common_animal_names}\n')
+    outfile.write(f'List of common animal names within animal-names.txt:\n{common_animal_names}\n\n')
 
 
-# Now we need a list of animal names (sourced in animal-names.txt file created from https://www.bluecross.org.uk/sites/default/files/d8/downloads/Blue-Cross-top-100-pet-dog-names.pdf)
-with open('animal-names.txt', 'r') as file:
-    common_animal_names = file.readline().split(' ')
-print(f'List of common animal names within animal-names.txt:\n{common_animal_names}\n')
+    # generate a list of common animal health conditions, favoring healthy (health-condition.txt file created from https://www.ardmoreah.com/resources/pet-care/common-pet-health-issues/)
+    with open('health-conditions.txt', 'r') as file:
+        animal_health_conditions = file.readline().split(',')
+    for k in range(20):
+        animal_health_conditions.append('healthy')
+    print(f'List of common medical issues within health-conditions.txt:\n{animal_health_conditions}\n')
+    outfile.write(f'List of common medical issues within health-conditions.txt:\n{animal_health_conditions}\n\n')
 
 
-# generate a list of common animal health conditions, favoring healthy (health-condition.txt file created from https://www.ardmoreah.com/resources/pet-care/common-pet-health-issues/)
-with open('health-conditions.txt', 'r') as file:
-    animal_health_conditions = file.readline().split(',')
-for k in range(20):
-    animal_health_conditions.append('healthy')
-print(f'List of common medical issues within health-conditions.txt:\n{animal_health_conditions}\n')
+    # generate a list of possible animal personalities
+    with open('personalities.txt', 'r') as file:
+        animal_personalities = file.readline().split(' ')
+    print(f'List of common animal personalities within personalities.txt:\n{animal_personalities}\n')
+    outfile.write(f'List of common animal personalities within personalities.txt:\n{animal_personalities}\n\n')
 
 
-# generate a list of possible animal personalities
-with open('personalities.txt', 'r') as file:
-    animal_personalities = file.readline().split(' ')
-print(f'List of common animal personalities within personalities.txt:\n{animal_personalities}\n')
+    # Randomize reference data into unique animal combinations, no repeats
+    Animals = generate_zoo_population(POPULATION, zoo_animals_species, common_animal_names, animal_personalities, diet)
+    Health_data = generate_health_data(Animals, animal_health_conditions)
+    Feed_data = generate_feeding_logs(Animals, carnivorous_foods, herbivorous_foods)
 
 
-# Randomize some pairs of animals and names to create unique, non repeating entries for our database dictionary
-Animals = generate_zoo_population(POPULATION, zoo_animals_species, common_animal_names, animal_personalities, diet)
-# print(f'\nAnimal Info:\n{Animals}\n\n')
+    # clump all data together like so, not really sure why we need this but oh well
+    Zoo_data = {
+        'Animals': Animals,
+        '7-Day Feed Log': Feed_data,
+        'Health Status': Health_data
+    }
 
 
-# create a new dict to store the health conditions of each animal
-Health_data = generate_health_data(Animals, animal_health_conditions)
-# print(f'Animal Health:\n{Health_data}\n\n')
+    # Print data in clean, easy to read fashion
+    out = display_zoo_data(Zoo_data)
+    print(out)
+    outfile.write(out)
 
-
-# create another new dict to hold data of the 7 day feeding log
-Feed_data = generate_feeding_logs(Animals, carnivorous_foods, herbivorous_foods)
-# print(f'Animal Feed:\n{Feed_data}\n\n')
-
-
-# clump all data together like so, not really sure why we need this but oh well
-Zoo_data = {
-    'Animals': Animals,
-    '7-Day Feed Log': Feed_data,
-    'Health Status': Health_data
-}
-
-
-# Print data in clean, easy to read fashion
-display_zoo_data(Zoo_data)
+print(f'\n\nTerminal results saved to:\t {outfile}\n')
